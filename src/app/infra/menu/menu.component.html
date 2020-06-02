@@ -1,8 +1,8 @@
-<p-menubar [model]="items">
-    <div class = "menu">
-        <input type="text" pInputText placeholder="Buscar eventos" class = "busca">
-       <a>
-        <i class="pi pi-shopping-cart" style="margin-left:.10em; font-size: 1.5em;"></i>
-       </a>
-    </div>
-</p-menubar>
+<nav>
+    <ul class="menu">
+        <li class="logo"><a href="#">EVENTOS D'AHORA</a></li>
+        <li class="item"><a href="#">Minha conta</a></li>
+        <li class="item"><a href="#"><i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i></a></li>
+        <li class="toggle" (click)="toggle()"><a href="#"><i class="pi pi-bars"></i></a></li>
+    </ul>
+</nav>
