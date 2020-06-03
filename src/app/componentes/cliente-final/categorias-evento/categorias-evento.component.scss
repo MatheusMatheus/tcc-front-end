@@ -1,3 +1,60 @@
+section {
+    border-bottom: 2px solid #3333;
+}
+
 .container {
-    padding: 10px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-x: scroll;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+}
+
+button {
+    text-align:center;
+    margin:5px; 
+    left: 60px;
+}
+
+
+/* Tablet*/
+@media all and (min-width: 600px) {
+
+    .container, nav {
+        overflow: hidden;
+    }
+
+   
+    button {
+        left: auto;
+        right: auto;
+    }
+
+}
+
+/* Desktop */
+@media all and (min-width: 900px) {
+
+    .container, nav {
+        overflow: hidden;
+    }
+
+    button {
+        left: auto;
+        right: auto;
+    }
+
 }

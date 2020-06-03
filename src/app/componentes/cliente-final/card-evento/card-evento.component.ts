@@ -1,3 +1,8 @@
+//TODO: Buscar eventos de acordo com maior número de compras (Eventos Populares),
+// perto da localização do usuário (Perto de você) e
+// filmes populares
+
+
 import { Component, OnInit } from '@angular/core';
 import { Evento } from 'src/app/dominio/Evento';
 import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
@@ -16,17 +21,17 @@ export class CardEventoComponent implements OnInit {
   constructor() {
     this.responsiveOptions = [
       {
-        breakpoint: '1024px',
+        breakpoint: '1350px',
         numVisible: 3,
         numScroll: 3
       },
       {
-        breakpoint: '768px',
+        breakpoint: '1100px',
         numVisible: 2,
         numScroll: 2
       },
       {
-        breakpoint: '560px',
+        breakpoint: '800px',
         numVisible: 1,
         numScroll: 1
       }
@@ -34,10 +39,11 @@ export class CardEventoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  
     this.eventos.push({
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show
@@ -46,7 +52,7 @@ export class CardEventoComponent implements OnInit {
     this.eventos.push({
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show
@@ -55,7 +61,7 @@ export class CardEventoComponent implements OnInit {
     this.eventos.push({
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show
@@ -64,7 +70,88 @@ export class CardEventoComponent implements OnInit {
     this.eventos.push({
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show
@@ -73,7 +160,7 @@ export class CardEventoComponent implements OnInit {
     this.eventos.push({
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show
@@ -82,7 +169,7 @@ export class CardEventoComponent implements OnInit {
     this.eventos.push({
       nome: 'Gretchen',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show
@@ -91,7 +178,7 @@ export class CardEventoComponent implements OnInit {
     this.eventos.push({
       nome: 'Tiririca',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show

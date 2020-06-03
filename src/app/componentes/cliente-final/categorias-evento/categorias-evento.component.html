@@ -1,12 +1,13 @@
-<section class = "container"
+<section>
+    <nav class = "container"
         fxLayout="row"
         fxLayout.xs="row"
         fxLayoutGap.xs="0"
         fxLayoutAlign="center">
 
     <button pButton type="button" *ngFor="let cat of categorias"
-                label="{{cat}}" 
-                class="ui-button-raised ui-button-secondary"
-                fxFlexOffset="10px">
+                label="{{cat}}"
+                class="ui-button-raised ui-button-secondary">
     </button>
+</nav>
 </section>

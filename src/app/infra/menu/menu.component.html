@@ -1,8 +1,17 @@
 <nav>
     <ul class="menu">
         <li class="logo"><a href="#">EVENTOS D'AHORA</a></li>
-        <li class="item"><a href="#">Minha conta</a></li>
-        <li class="item"><a href="#"><i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i></a></li>
-        <li class="toggle" (click)="toggle()"><a href="#"><i class="pi pi-bars"></i></a></li>
+        <li  [className]="exibir ? 'item active' : 'item'" >
+            <a href="#" >Minha conta</a>
+        </li>
+        <li [className]="exibir ? 'item active' : 'item'" >
+            <a href="#" >
+                <i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i>
+            </a>
+        </li>
+        <li class="toggle" (click)="toggle()">
+            <a href="#"><i class="pi pi-bars"></i></a>
+        </li>
     </ul>
 </nav>
+<!-- [className]="exibir ? 'active' : 'inactive'" -->

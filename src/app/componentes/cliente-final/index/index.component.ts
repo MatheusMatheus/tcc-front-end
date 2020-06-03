@@ -40,7 +40,7 @@ public evento: Evento
     return {
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',
-      data: new Date(),
+      data: new Date().toLocaleDateString(),
       hora: "20:00",
       valor: 350,
       categoria: CategoriaEvento.show

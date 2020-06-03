@@ -1,11 +1,21 @@
 
 input {
-    padding: 20px;
-    width: 600px;
+    padding: 15px;
+    width: 300px;
     line-height: 1.25;
     background-color: rgb(24, 26, 27);
     color: rgb(202, 198, 190);
     z-index: 10;
+    margin-bottom: 20px;
+    outline: none;
 }
 
     
+/* Tablet*/
+@media all and (min-width: 600px) {
+
+    input {
+        width: 500px;
+    }
+
+}

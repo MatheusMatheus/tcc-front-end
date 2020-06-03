@@ -6,13 +6,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  exibir: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.exibir);
   }
 
   toggle() {
-    
+    this.exibir = !this.exibir;
+    console.log(this.exibir);
+    return this.exibir;
   }
 
 }

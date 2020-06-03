@@ -1,5 +1,4 @@
 .container {
-    border: 1px solid red;
     padding: 0 10px 0 10px;
 }
 
@@ -11,20 +10,19 @@
     padding: 2em 0 2.25em 0;
 
 }
-.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data .car-title {
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item, .evento-nome  {
     font-weight: 700;
-    font-size: 20px;
     margin-top: 24px;
     
 }
-.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data .car-subtitle {
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-subtitle {
     margin: 0.25em 0 2em 0;
 
 }
-.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data button {
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item button {
     margin-left: 0.5em;
 }
-.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data button:first-child {
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item button:first-child {
     margin-left: 0;
     
 }
@@ -40,13 +38,91 @@
     margin-right: 0.6em;
 }
 
-img {
-    overflow: hidden;
-    width: 300px;
-    height: 300px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
 }
 
 .p-nogutter {
     width: 300px;
     height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    filter: brightness(60%);
+    transition: all .2s ease-in-out;
+}
+
+img:hover {
+    filter: brightness(100%);
+}
+
+
+.info-evento {
+    padding: 10px;
+    width: auto;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #b3c2ca;
+}
+
+.evento-nome, .local-data, .valor {
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.evento-nome {
+    position: absolute;
+    left: 50%;                       
+    bottom: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+
+}
+
+.data-valor {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    background-color: aquamarine;
+}
+
+.data {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    line-height: 1.375rem;
+    padding: 15px 0 0 15px;
+}
+
+.local {
+    font-weight: 700;
+}
+
+.valor {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    flex: 1 0 0;
+    padding: 5px;
+    padding-right: 15px;
+}
+
+
+@media all and (max-width: 600px) {
+
+    .evento-nome {
+        font-size: 4.5vw;
+        text-align: center;
+        bottom: 55%;
+    }
 }

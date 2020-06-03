@@ -1,34 +1,120 @@
 <section class = "container">
     <p-carousel [value]="eventos" 
-            [numVisible]="3" 
+            [numVisible]="4" 
             [numScroll]="3" 
             [circular]="false" 
             [responsiveOptions]="responsiveOptions"
             >
-    <p-header>
-        <h1>Eventos Populares</h1>
-    </p-header>
-    <ng-template let-evento pTemplate="item" >
-        <div class="car-details" 
+        <p-header>
+            <h1>Eventos Populares</h1>
+        </p-header>
+        <ng-template let-evento pTemplate="item" >
+        <a href="">
+            <div class="car-details" 
             fxLayoutAlign="center"  
             fxLayout="row"
             fxLayout.xs="row"
             fxLayoutGap.xs="0">
 
-            <div class="p-nogutter" fxFlexOffset="10px">
+            <div class="p-nogutter">
                 <img src="/assets/monte.jpg"/>
-                <div class="p-col-12 car-data">
-                    <div class="car-title">{{evento.nome}}</div>
-                    <div class="car-subtitle">{{evento.local}} | {{evento.valor}}</div>
-
-                    <div class="car-buttons">
-                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-search"></button>
-                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-star"></button>
-                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-cog"></button>
-                    </div>
+                <div class="evento-nome">{{evento.nome}}</div>
+                <div class="info-evento">
+                    <div class="local">{{evento.local}}</div>
+                    <div class="cidade">Brasília</div>
+                    
                 </div>
+
+                <div class="data-valor">
+                    <span class="data">{{evento.data}}</span>
+                    <span class="valor">R$ {{evento.valor}},00</span>
+                </div>
+
             </div>
         </div>
-    </ng-template>
-</p-carousel>
+        </a>
+        </ng-template>
+    </p-carousel>
 </section>
+
+<section class = "container">
+    <p-carousel [value]="eventos" 
+            [numVisible]="4" 
+            [numScroll]="3" 
+            [circular]="false" 
+            [responsiveOptions]="responsiveOptions"
+            >
+        <p-header>
+            <h1>Perto de Você</h1>
+        </p-header>
+        <ng-template let-evento pTemplate="item" >
+        <a href="">
+            <div class="car-details" 
+            fxLayoutAlign="center"  
+            fxLayout="row"
+            fxLayout.xs="row"
+            fxLayoutGap.xs="0">
+
+            <div class="p-nogutter">
+                <img src="/assets/monte.jpg"/>
+                <div class="evento-nome">{{evento.nome}}</div>
+                <div class="info-evento">
+                    <div class="local">{{evento.local}}</div>
+                    <div class="cidade">Brasília</div>
+                    
+                </div>
+
+                <div class="data-valor">
+                    <span class="data">{{evento.data}}</span>
+                    <span class="valor">R$ {{evento.valor}},00</span>
+                </div>
+
+            </div>
+        </div>
+        </a>
+        </ng-template>
+    </p-carousel>
+</section>
+
+
+<section class = "container">
+    <p-carousel [value]="eventos" 
+            [numVisible]="4" 
+            [numScroll]="3" 
+            [circular]="false" 
+            [responsiveOptions]="responsiveOptions"
+            >
+        <p-header>
+            <h1>Filmes Populares</h1>
+        </p-header>
+        <ng-template let-evento pTemplate="item" >
+        <a href="">
+            <div class="car-details" 
+            fxLayoutAlign="center"  
+            fxLayout="row"
+            fxLayout.xs="row"
+            fxLayoutGap.xs="0">
+
+            <div class="p-nogutter">
+                <img src="/assets/monte.jpg"/>
+                <div class="evento-nome">{{evento.nome}}</div>
+                <div class="info-evento">
+                    <div class="local">{{evento.local}}</div>
+                    <div class="cidade">Brasília</div>
+                    
+                </div>
+
+                <div class="data-valor">
+                    <span class="data">{{evento.data}}</span>
+                    <span class="valor">R$ {{evento.valor}},00</span>
+                </div>
+
+            </div>
+        </div>
+        </a>
+        </ng-template>
+    </p-carousel>
+</section>
+
+
+

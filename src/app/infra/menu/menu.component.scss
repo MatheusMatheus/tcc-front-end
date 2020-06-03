@@ -1,6 +1,10 @@
 nav {
-  background: #222;
-  padding: 5px 20px;
+  background-color: #222;
+  opacity: 0.8;
+  padding: 0px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 ul {
@@ -10,15 +14,14 @@ a {
   color: white;
   text-decoration: none;
 }
-a:hover {
+.logo a:hover, a:hover, i:hover {
   text-decoration: underline;
+  color: white;
 }
-.logo a:hover {
-  text-decoration: none;
-}
+
 .menu li {
   font-size: 16px;
-  padding: 15px 5px;
+  padding: 5px;
   white-space: nowrap;
 }
 .logo a,
@@ -50,6 +53,7 @@ a:hover {
 .item.active {
   display: block;
 }
+
 /* Tablet menu */
 @media all and (min-width: 600px) {
   .menu {
@@ -93,7 +97,7 @@ a:hover {
   }
 }
 /* Desktop menu */
-@media all and (min-width: 900px) {
+@media all and (min-width: 750px) {
   .item {
     display: block;
     width: auto;
