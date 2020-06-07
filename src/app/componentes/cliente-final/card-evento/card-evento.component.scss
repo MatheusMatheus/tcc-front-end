@@ -126,3 +126,10 @@ img:hover {
         bottom: 55%;
     }
 }
+
+@media all and (min-width: 601px) {
+    .evento-nome {
+        font-size: 30px;
+
+    }
+}

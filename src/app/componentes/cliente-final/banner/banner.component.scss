@@ -42,19 +42,11 @@ a {
 }
 
 
-input {
-    padding: 20px;
-    width: 600px;
-    line-height: 1.25;
-    background-color: rgb(24, 26, 27);
-    color: rgb(202, 198, 190)
-}
-
 /* Tablet*/
 @media all and (min-width: 600px) {
     
     h1 {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     p {
