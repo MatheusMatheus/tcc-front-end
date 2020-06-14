@@ -1,1 +1,31 @@
-<app-index></app-index>
+<header>
+  <ul class="navigation" (scroll)="onScroll($event)" [className]="colorido ? 'navigation colorido' : 'navigation'">
+    <li class="logo" routerLink="">EVENTOS D'AHORA</li>
+
+
+    <li  [className]="exibir ? 'item active' : 'item'" >
+      Criar evento
+    </li>
+    <li [className]="exibir ? 'item active' : 'item'"
+        routerLink="login">
+      Minha conta
+    </li>
+    <li [className]="exibir ? 'item active' : 'item'"
+        routerLink="carrinho">
+      <i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i>
+    </li>
+
+    <li class="toggle" (click)="toggle()">
+      <i class="pi pi-bars"></i>
+    </li>
+  </ul>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <app-rodape></app-rodape>
+</footer>
+

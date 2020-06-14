@@ -1,0 +1,72 @@
+<section class="container">
+  <ng-template [ngIf]="eventosInseridos.length === 0">
+    <div class="carrinho-vazio">
+      <h1>Parece que seu carrinho está vazio...</h1>
+
+      <button label="Continue comprando" pButton
+              class="ui-button-primary"
+              routerLink="/"></button>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="eventosInseridos.length > 0">
+    <div class="carrinho">
+      <div class="titulo-carrinho">
+        <h1>Carrinho de compra</h1>
+        <p>Uma visão geral do seu pedido</p>
+      </div>
+
+      <div class="eventos" *ngFor="let evento of eventosInseridos">
+        <div class ="infos-evento">
+          <div class="conteudo-horizontal">
+            <h1>{{evento.nome}}</h1>
+           <i class="pi pi-times fechar" ></i>
+          </div>
+         <div>
+           <p>Local do assento</p>
+           <p><strong>Data: </strong>{{evento.data}}</p>
+           <p><strong>Local: </strong>{{evento.local}}</p>
+         </div>
+
+          <hr>
+
+          <div class="conteudo-horizontal">
+            <div style="display: flex">
+              <select id="quantidade" name="quantidade" [(ngModel)]="quantidade">
+                <option *ngFor="let qtd of quantidades" [value]="qtd">{{qtd}}</option>
+              </select>
+            </div>
+
+            <div class="subtotal">R$ {{evento.valor * quantidade }}</div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="eventos">
+        <div class="infos-evento">
+          <div class="conteudo-horizontal">
+            <h4>Custo do serviço</h4>
+            <h4>R$ 5,00</h4>
+          </div>
+          <hr>
+
+          <div class="conteudo-horizontal">
+            <h3>Total a pagar</h3>
+            <h2>R$ 5,00</h2>
+          </div>
+
+          <div class="p-field p-grid">
+            <button label="Finalizar Pedido" pButton class="ui-button-primary largura-total"></button>
+          </div>
+
+          <a routerLink="/">Continuar comprando</a>
+
+        </div>
+      </div>
+    </div>
+
+  </ng-template>
+</section>

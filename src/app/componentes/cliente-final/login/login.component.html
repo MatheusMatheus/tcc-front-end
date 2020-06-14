@@ -1,14 +1,33 @@
-<section class="login">
+<section class="container">
+  <div class="login">
     <div class="titulo">Login</div>
-    <div>
-        <form>
-            <input id="float-input" type="text" size="30" pInputText> 
-            <label for="float-input">E-mail</label>
+      <form>
+        <div class="p-field p-grid">
+          <label for="login" class="p-col-fixed">Login</label>
+          <div class="p-col">
+            <input id="login" type="text" pInputText>
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="senha" class="p-col-fixed">Senha</label>
+          <div class="p-col">
+            <input id="senha" type="password" pInputText>
+          </div>
+        </div>
 
-            <input id="float-input" type="text" size="30" pInputText> 
-            <label for="float-input">Senha</label>
+        <div class="p-field p-grid">
+          <button label="Login" pButton class="ui-button-primary largura-total"></button>
+        </div>
+    </form>
 
-            <p-button label="Login"></p-button>
-        </form>
+    <div style="text-align: center">
+      <a routerLink="/recuperarSenha">Recuperar Senha</a>
     </div>
+    <hr>
+
+    <div style="text-align: center">
+      <span>Ainda não possuo conta </span><a routerLink="/criarConta">Criar uma</a>
+    </div>
+  </div>
+
 </section>

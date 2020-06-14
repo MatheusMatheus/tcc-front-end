@@ -1,0 +1,60 @@
+<section class="container">
+  <div class="registrar">
+    <div class="titulo">Nova conta</div>
+    <form>
+      <div class="p-field p-grid">
+        <label for="nomeCompleto" class="p-col-fixed" style="width:100px">Nome Completo</label>
+        <div class="p-col">
+          <input id="nomeCompleto" type="text" placeholder="Nome completo" pInputText>
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <label for="email" class="p-col-fixed" style="width:100px">E-mail</label>
+        <div class="p-col">
+          <input id="email" type="text" placeholder="E-mail" pInputText>
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <label for="senha" class="p-col-fixed" style="width:100px">Senha</label>
+        <div class="p-col">
+          <input id="senha" type="text" placeholder="Senha"  pInputText>
+        </div>
+
+        <div class="p-col">
+          <input id="confirmaSenha" type="text" placeholder="Confirmação da senha" required="true" pInputText>
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <label for="pais" class="p-col-fixed" >País</label>
+        <select id="pais" name="pais" [(ngModel)]="cities">
+          <option *ngFor="let city of cities" value="city.name">{{city.name}}</option>
+        </select>
+      </div>
+
+      <div class="p-field p-grid">
+        <label for="celular" class="p-col-fixed">Número celular</label>
+        <div class="p-col">
+          <p-inputMask
+            id="celular"
+            mask="+99 (99)-9999-9999"
+            placeholder="(99)-9999-9999"></p-inputMask>
+
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <button label="Registrar" pButton class="ui-button-primary .largura-total"></button>
+      </div>
+    </form>
+
+    <hr>
+
+    <div style="text-align: center">
+      <span>Já possui uma conta? </span><a routerLink="/login">Realizar login</a>
+    </div>
+  </div>
+
+</section>
