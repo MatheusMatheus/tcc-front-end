@@ -10,13 +10,10 @@ import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
 })
 export class IndexComponent implements OnInit {
 
-public evento: Evento
-
   constructor(private fotosService: FotosService) { }
 
   ngOnInit(): void {
     this.images = this.fotosService.getFotos();
-    this.evento = this.criaEvento();
   }
 
   images: any[];
@@ -35,16 +32,5 @@ public evento: Evento
         numVisible: 1
     }
 ];
-
-  criaEvento() : Evento {
-    return {
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: "20:00",
-      valor: 350,
-      categoria: CategoriaEvento.show
-    } 
-  }
 
 }

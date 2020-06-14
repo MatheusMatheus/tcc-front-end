@@ -1,20 +1,19 @@
-<nav>
-    <ul class="menu">
-        <li class="logo"><a href="#">EVENTOS D'AHORA</a></li>
+    <ul class="navigation">
+        <li class="logo">EVENTOS D'AHORA</li>
         <li  [className]="exibir ? 'item active' : 'item'" >
-            <a href="#" >Criar evento</a>
+            Criar evento
         </li>
-        <li  [className]="exibir ? 'item active' : 'item'" >
-            <a href="#" >Minha conta</a>
+        <li  [className]="exibir ? 'item active' : 'item'" 
+            (click)="minhaConta()">
+            Minha conta
         </li>
         <li [className]="exibir ? 'item active' : 'item'" >
-            <a href="#" >
+            
                 <i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i>
-            </a>
+            
         </li>
         <li class="toggle" (click)="toggle()">
-            <a href="#"><i class="pi pi-bars"></i></a>
+            <i class="pi pi-bars"></i>
         </li>
     </ul>
-</nav>
-<!-- [className]="exibir ? 'active' : 'inactive'" -->
+<router-outlet></router-outlet>

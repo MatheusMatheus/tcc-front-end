@@ -14,7 +14,6 @@ export class CategoriasEventoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategorias();
-    console.table(this.categorias)
   }
 
   //TODO: Buscar categorias de eventos em algum serviço a ser criado

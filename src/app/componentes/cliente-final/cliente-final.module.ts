@@ -10,11 +10,16 @@ import { CategoriasEventoComponent } from './categorias-evento/categorias-evento
 import { ButtonModule } from 'primeng/button';
 import { CardEventoComponent } from './card-evento/card-evento.component';
 import { CarouselModule } from 'primeng/carousel';
-
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-  declarations: [IndexComponent, BannerComponent, CategoriasEventoComponent, CardEventoComponent],
+  declarations: [
+    IndexComponent,
+     BannerComponent, 
+     CategoriasEventoComponent, 
+     CardEventoComponent, 
+     LoginComponent],
   imports: [
     CommonModule,
     InfraModule,

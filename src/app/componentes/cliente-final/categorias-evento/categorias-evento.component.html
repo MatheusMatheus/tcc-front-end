@@ -1,6 +1,5 @@
-<div class = "container">
-    <button pButton type="button" *ngFor="let cat of categorias"
-                label="{{cat}}"
-                class="ui-button-raised ui-button-secondary">
-    </button>
-</div>
+<ul class = "container">
+    <li *ngFor="let cat of categorias">
+      {{cat}}
+    </li>
+</ul>
