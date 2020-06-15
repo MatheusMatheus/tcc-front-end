@@ -1,5 +1,6 @@
 <header>
-  <ul class="navigation" (scroll)="onScroll($event)" [className]="colorido ? 'navigation colorido' : 'navigation'">
+  <ul #nav class="navigation" (scroll)="onScroll($event)"
+      [className]="colorido ? 'navigation colorido' : 'navigation'">
     <li class="logo" routerLink="">EVENTOS D'AHORA</li>
 
 

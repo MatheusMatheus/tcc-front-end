@@ -6,6 +6,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Evento } from 'src/app/dominio/Evento';
 import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-card-evento',
@@ -18,7 +19,7 @@ export class CardEventoComponent implements OnInit {
 
   responsiveOptions;
 
-  constructor() {
+  constructor(private router: ActivatedRoute) {
     this.responsiveOptions = [
       {
         breakpoint: '1350px',
@@ -38,16 +39,11 @@ export class CardEventoComponent implements OnInit {
     ];
   }
 
+  mostraRota() {
+    console.log(this.router);
+  }
+
   ngOnInit(): void {
-  
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: "20:00",
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
 
     this.eventos.push({
       nome: 'Guns and Roses',
@@ -156,7 +152,16 @@ export class CardEventoComponent implements OnInit {
       valor: 350,
       categoria: CategoriaEvento.show
     });
-    
+
+    this.eventos.push({
+      nome: 'Guns and Roses',
+      local: 'Mane Garrincha',
+      data: new Date().toLocaleDateString(),
+      hora: "20:00",
+      valor: 350,
+      categoria: CategoriaEvento.show
+    });
+
     this.eventos.push({
       nome: 'Guns and Roses',
       local: 'Mane Garrincha',

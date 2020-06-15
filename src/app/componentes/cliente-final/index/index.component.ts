@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FotosService } from 'src/app/services/fotos/fotos.service';
 import { Evento } from 'src/app/dominio/Evento';
 import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
+import {EventoService} from '../../../services/evento/evento.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -10,15 +12,16 @@ import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
 })
 export class IndexComponent implements OnInit {
 
-  constructor(private fotosService: FotosService) { }
+  evento: Evento;
+  constructor(private eventoService: EventoService,
+              private router: Router) { }
 
   ngOnInit(): void {
-    this.images = this.fotosService.getFotos();
+    this.evento = this.eventoService.criaEvento();
   }
 
-  images: any[];
 
-  responsiveOptions:any[] = [
+  responsiveOptions: any[] = [
     {
         breakpoint: '1024px',
         numVisible: 5

@@ -50,10 +50,15 @@
       .conteudo-horizontal {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
 
       .fechar {
         font-size: .8em;
+      }
+
+      .excluir {
+        display: none;
       }
 
       select {
@@ -88,13 +93,16 @@
 @media all and (min-width: 500px) {
 
   .carrinho {
-    width: 80%;
+    width: 90%;
     align-self: center;
+
   }
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
   .carrinho {
+    width: 60%;
+    margin-top: 50px;
     h1 {
       font-size: 2.5vw;
     }
@@ -113,6 +121,16 @@
         hr {
           display: none;
         }
+
+        .fechar {
+          display: none;
+        }
+
+        .excluir {
+          display: block;
+          margin-left: auto;
+        }
+
       }
     }
   }

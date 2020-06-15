@@ -31,10 +31,14 @@
           <hr>
 
           <div class="conteudo-horizontal">
-            <div style="display: flex">
+            <div>
               <select id="quantidade" name="quantidade" [(ngModel)]="quantidade">
                 <option *ngFor="let qtd of quantidades" [value]="qtd">{{qtd}}</option>
               </select>
+            </div>
+
+            <div class="excluir">
+              <a>Excluir</a>
             </div>
 
             <div class="subtotal">R$ {{evento.valor * quantidade }}</div>

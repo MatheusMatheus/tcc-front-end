@@ -9,14 +9,16 @@
   margin: 0 0 1.5em 0;
   list-style: none;
   padding-left: 0;
-  background: transparent;
+  transition-duration: .5s;
 }
 
 .colorido {
+  transition-duration: .5s;
   background: #110D18;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
   -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
+  height: auto;
 }
 
 .navigation li {

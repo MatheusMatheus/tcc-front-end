@@ -12,19 +12,23 @@ import {CarouselModule} from 'primeng/carousel';
 import {LoginComponent} from './login/login.component';
 import {RouterModule, Routes} from '@angular/router';
 import {IndexComponent} from './index/index.component';
-import { ResetarSenhaComponent } from './resetar-senha/resetar-senha.component';
-import { CriarContaComponent } from './criar-conta/criar-conta.component';
+import {ResetarSenhaComponent} from './resetar-senha/resetar-senha.component';
+import {CriarContaComponent} from './criar-conta/criar-conta.component';
 import {FormsModule} from '@angular/forms';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputMaskModule} from 'primeng/inputmask';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
+import {CarrinhoComponent} from './carrinho/carrinho.component';
+import {EventoComponent} from './evento/main/evento.component';
+import {AccordionModule} from 'primeng/accordion';
+import {EscolhaIngressoComponent} from './evento/escolha-ingresso/escolha-ingresso.component';
 
 const rotas: Routes = [
   {path: '', component: IndexComponent},
   {path: 'login', component: LoginComponent},
   {path: 'recuperarSenha', component: ResetarSenhaComponent},
   {path: 'criarConta', component: CriarContaComponent},
-  {path: 'carrinho', component: CarrinhoComponent}
+  {path: 'carrinho', component: CarrinhoComponent},
+  {path: 'evento', component: EventoComponent}
 ];
 
 @NgModule({
@@ -36,7 +40,9 @@ const rotas: Routes = [
     IndexComponent,
     ResetarSenhaComponent,
     CriarContaComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    EventoComponent,
+    EscolhaIngressoComponent
   ],
   imports: [
     CommonModule,
@@ -49,6 +55,7 @@ const rotas: Routes = [
     FormsModule,
     AutoCompleteModule,
     InputMaskModule,
+    AccordionModule,
     RouterModule.forChild(rotas),
   ],
   exports: [
