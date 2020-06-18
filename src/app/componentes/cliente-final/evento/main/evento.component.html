@@ -1,7 +1,26 @@
 <app-banner [evento]="evento"></app-banner>
 <section class="container">
-  <div class="filtro"></div>
+
   <div class="escolha">
+    <ul class="filtro">
+      <li>Filtrar por:</li>
+      <li>Todos</li>
+      <li>VIP</li>
+      <li>Premium</li>
+      <li>Camarote</li>
+      <li>Pista</li>
+      <li>
+        <ng-select [items]="ordemPreco"
+                   placeholder="Preço"
+                   [clearable]="false"
+                   [searchable]="false"
+                   [(ngModel)]="odemPrecoSelecionada"
+                   id="pais"
+                   class="select">
+        </ng-select>
+      </li>
+    </ul>
+
     <div class="ingresso">
       <app-escolha-ingresso></app-escolha-ingresso>
     </div>
@@ -19,7 +38,7 @@
 
     <ng-template #desktop>
       <div class="assento">
-        <h1>Matheus lindo</h1>
+
       </div>
     </ng-template>
   </div>

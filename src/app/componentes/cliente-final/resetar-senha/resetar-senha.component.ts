@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-resetar-senha',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resetar-senha.component.scss']
 })
 export class ResetarSenhaComponent implements OnInit {
+
+  cliente: string;
 
   constructor() { }
 

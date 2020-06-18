@@ -12,7 +12,7 @@ export class CarrinhoComponent implements OnInit {
   constructor() { }
   eventosInseridos: Evento[] = [];
   quantidades: number[];
-  quantidade = 0;
+  quantidade = 1;
 
   ngOnInit(): void {
     this.quantidades = Array(5);
@@ -21,7 +21,7 @@ export class CarrinhoComponent implements OnInit {
     }
 
     this.eventosInseridos.push({
-      nome: 'Guns and Roses',
+      nome: 'Guns and Roses asdasdsdas asddsadsd',
       local: 'Brasília',
       data: new Date().toLocaleDateString(),
       hora: '00:00',

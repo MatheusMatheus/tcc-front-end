@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 html, body {
   height: 100%;
 }
@@ -9,12 +11,6 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #1c1f1f;
 
-  input[type=text], input[type=password], select {
-    line-height: 1.25;
-    background-color: #1c1f1f;
-    color: white;
-  }
-
   li {
     color: white;
     letter-spacing: .08em;
@@ -22,10 +18,15 @@ body {
 
 }
 
+input {
+  border-radius: 4px !important;
+  width: 100% !important;
+}
+
 h1, p, a {
-  color: white;
-  letter-spacing: .08em;
-  text-decoration: none;
+  color: white !important;
+  letter-spacing: .08em !important;
+  text-decoration: none !important;
 }
 
 .container {
@@ -35,7 +36,8 @@ h1, p, a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 6em;
+  padding: 1em 0;
+  border: 1px solid red;
 }
 
 .largura-total {
@@ -44,7 +46,20 @@ h1, p, a {
   padding: 1em;
 }
 
+button {
+  padding: .15em !important;
+}
 
+.p-col {
+  margin-bottom: 20px !important;
+}
+
+@media all and (min-width: 500px)  {
+  .container {
+
+    padding: 6em;
+  }
+}
 
 
 

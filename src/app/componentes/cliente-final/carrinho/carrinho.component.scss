@@ -46,15 +46,28 @@
       border-radius: 7px;
       margin-bottom: 10px;
       color: white;
+      line-height: 1.5;
 
       .conteudo-horizontal {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        h1 {
+          font-size: 5.5vw;
+        }
+      }
+
+      div {
+        p {
+          font-size: 4vw;
+        }
       }
 
       .fechar {
-        font-size: .8em;
+        font-size: 1em;
+        display: flex;
+        align-self: end;
       }
 
       .excluir {
@@ -71,7 +84,7 @@
       }
 
       .subtotal {
-        font-size: 2.7em;
+        font-size: 2em;
       }
 
       a {
@@ -95,7 +108,22 @@
   .carrinho {
     width: 90%;
     align-self: center;
+    .eventos {
+      .infos-evento {
+        .conteudo-horizontal {
 
+          h1 {
+            font-size: 3vw;
+          }
+        }
+
+        div {
+          p {
+            font-size: 2.5vw;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -118,6 +146,23 @@
         border-radius: 0;
         border-top: 1px solid white;
 
+        .conteudo-horizontal {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h1 {
+            font-size: 2.5em;
+          }
+        }
+
+        div {
+          p {
+            font-size: 1em;
+          }
+        }
+
+
         hr {
           display: none;
         }
@@ -131,7 +176,13 @@
           margin-left: auto;
         }
 
+        .subtotal {
+          font-size: 3vw;
+        }
+
       }
     }
   }
 }
+
+

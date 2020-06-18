@@ -21,6 +21,8 @@ import {CarrinhoComponent} from './carrinho/carrinho.component';
 import {EventoComponent} from './evento/main/evento.component';
 import {AccordionModule} from 'primeng/accordion';
 import {EscolhaIngressoComponent} from './evento/escolha-ingresso/escolha-ingresso.component';
+import {DropdownModule} from 'primeng/dropdown';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 const rotas: Routes = [
   {path: '', component: IndexComponent},
@@ -56,6 +58,8 @@ const rotas: Routes = [
     AutoCompleteModule,
     InputMaskModule,
     AccordionModule,
+    DropdownModule,
+    NgSelectModule,
     RouterModule.forChild(rotas),
   ],
   exports: [

@@ -1,5 +1,53 @@
 .ingresso {
-  div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
 
+  .preco, .qtd-ingressos {
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+
+    h1 {
+      font-size: 4.5vw;
+    }
+
+    .down {
+      h1 {
+        font-size: 6.5vw;
+        margin-left: auto;
+      }
+    }
+
+    .select {
+      margin-right: .5em;
+      flex-grow: 4;
+    }
+  }
+
+}
+
+/* Tablet*/
+@media all and (min-width: 900px) {
+  .ingresso {
+
+    .preco {
+        flex-direction: row;
+
+      h1 {
+        font-size: 1em;
+      }
+
+      .down {
+        h1 {
+          font-size: 1.2em;
+          margin-left: auto;
+        }
+      }
+    }
   }
 }
+

@@ -32,9 +32,12 @@
 
           <div class="conteudo-horizontal">
             <div>
-              <select id="quantidade" name="quantidade" [(ngModel)]="quantidade">
-                <option *ngFor="let qtd of quantidades" [value]="qtd">{{qtd}}</option>
-              </select>
+              <ng-select [items]="quantidades"
+                         [clearable]="false"
+                         [searchable]="false"
+                         [(ngModel)]="quantidade"
+                         id="quantidade">
+              </ng-select>
             </div>
 
             <div class="excluir">

@@ -5,13 +5,21 @@
         <div class="p-field p-grid">
           <label for="login" class="p-col-fixed">Login</label>
           <div class="p-col">
-            <input id="login" type="text" pInputText>
+            <app-input-texto id="login"
+                             [tipo]="'text'"
+                             required="true"
+                             [(ngModel)]="cliente.login.usuario" name="usuario">
+            </app-input-texto>
           </div>
         </div>
         <div class="p-field p-grid">
           <label for="senha" class="p-col-fixed">Senha</label>
           <div class="p-col">
-            <input id="senha" type="password" pInputText>
+            <app-input-texto id="senha"
+                             [tipo]="'password'"
+                             required="true"
+                             [(ngModel)]="cliente.login.senha" name="senha">
+            </app-input-texto>
           </div>
         </div>
 

@@ -1,56 +1,81 @@
 <section class="container">
-  <div class="registrar">
+  <div class="registrar p-grid">
     <div class="titulo">Nova conta</div>
     <form>
-      <div class="p-field p-grid">
-        <label for="nomeCompleto" class="p-col-fixed" style="width:100px">Nome Completo</label>
+      <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <input id="nomeCompleto" type="text" placeholder="Nome completo" pInputText>
+          <label class="p-col-fixed" style="width:100px">Nome Completo</label>
+          <app-input-texto id="nome"
+                     [placeholder]="'Nome Completo'"
+                     required="true"
+                     [(ngModel)]="cliente.nome" name="nome">
+          </app-input-texto>
         </div>
       </div>
 
-      <div class="p-field p-grid">
-        <label for="email" class="p-col-fixed" style="width:100px">E-mail</label>
+      <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <input id="email" type="text" placeholder="E-mail" pInputText>
+          <label for="email" class="p-col-fixed" style="width:100px">E-mail</label>
+          <app-input-texto id="email"
+                           [placeholder]="'E-mail'"
+                           required="true"
+                           [(ngModel)]="cliente.email" name="email">
+          </app-input-texto>
         </div>
       </div>
 
-      <div class="p-field p-grid">
-        <label for="senha" class="p-col-fixed" style="width:100px">Senha</label>
+      <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <input id="senha" type="text" placeholder="Senha"  pInputText>
+          <label for="senha" class="p-col-fixed" style="width:100px">Senha</label>
+          <app-input-texto id="senha"
+                           [placeholder]="'Senha'"
+                           [tipo]="'password'"
+                           required="true"
+                           [(ngModel)]="cliente.login.senha" name="senha">
+          </app-input-texto>
         </div>
 
         <div class="p-col">
-          <input id="confirmaSenha" type="text" placeholder="Confirmação da senha" required="true" pInputText>
+          <app-input-texto id="confirmaSenha"
+                           [placeholder]="'Confirmação da senha'"
+                           [tipo]="'password'"
+                           required="true"
+                           [(ngModel)]="cliente.login.senha" name="senha">
+          </app-input-texto>
         </div>
       </div>
 
-      <div class="p-field p-grid">
-        <label for="pais" class="p-col-fixed" >País</label>
-        <select id="pais" name="pais" [(ngModel)]="cities">
-          <option *ngFor="let city of cities" value="city.name">{{city.name}}</option>
-        </select>
+      <div class=" p-grid p-dir-col">
+        <div class="p-col">
+          <label for="pais" class="p-col-fixed" style="width:100%">País</label>
+          <ng-select [items]="paises"
+                     placeholder="País"
+                     [clearable]="false"
+                     [searchable]="false"
+                     [(ngModel)]="pais"
+                     id="pais"
+                     class="select">
+          </ng-select>
+        </div>
       </div>
 
-      <div class="p-field p-grid">
+      <div class=" p-grid p-dir-col" style="margin-bottom: 20px">
         <label for="celular" class="p-col-fixed">Número celular</label>
         <div class="p-col">
           <p-inputMask
             id="celular"
             mask="+99 (99)-9999-9999"
             placeholder="(99)-9999-9999"></p-inputMask>
-
         </div>
       </div>
 
-      <div class="p-field p-grid">
+      <div class=" p-grid p-dir-col" style="margin-bottom: 20px">
         <div class="p-col">
-        <button label="Registrar" pButton class="ui-button-primary largura-total"></button>
+          <button label="Registrar" pButton class="ui-button-primary largura-total"></button>
         </div>
       </div>
     </form>
+
 
     <hr>
 

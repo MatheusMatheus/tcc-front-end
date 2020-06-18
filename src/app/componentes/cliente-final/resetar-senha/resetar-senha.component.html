@@ -5,9 +5,13 @@
       Informe seu endereço de e-mail abaixo, um link para recuperar a senha será enviado</div>
     <form>
       <div class="p-field p-grid">
-        <label for="email" class="p-col-fixed">E-mail</label>
+
         <div class="p-col">
-          <input id="email" type="text" pInputText>
+          <label for="email" class="p-col-fixed">E-mail</label>
+          <app-input-texto id="email"
+                           required="true"
+                           [(ngModel)]="cliente" name="email">
+          </app-input-texto>
         </div>
       </div>
 

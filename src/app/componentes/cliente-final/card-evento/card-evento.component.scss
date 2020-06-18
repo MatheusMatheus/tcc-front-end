@@ -52,9 +52,10 @@ a:hover {
     height: auto;
     position: relative;
     overflow: hidden;
-    -webkit-box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 5px 35px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 5px 35px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 5px 35px 0 rgba(0,0,0,0.75);
+  align-self: center;
 }
 
 .container-img {
@@ -145,8 +146,21 @@ img:hover {
 }
 
 @media all and (min-width: 601px) {
-    .evento-nome {
-        font-size: 30px;
+  .card-container {
+    border: 1px solid blue;
+    align-self: center;
+    width: 90%;
+  }
 
-    }
+  .evento-nome {
+      font-size: 30px;
+  }
+}
+
+@media all and (min-width: 1800px) {
+  .card-container {
+    width: 75%;
+  }
+
+
 }

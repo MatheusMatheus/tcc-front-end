@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Cliente} from '../../../dominio/Cliente';
 
 @Component({
   selector: 'app-criar-conta',
@@ -7,16 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarContaComponent implements OnInit {
 
-  cities: any[];
+  pais: string;
+  paises: any[];
+
+  cliente: Cliente;
 
   constructor() {
-    this.cities = [
-      {name: 'New York', code: 'NY'},
-      {name: 'Rome', code: 'RM'},
-      {name: 'London', code: 'LDN'},
-      {name: 'Istanbul', code: 'IST'},
-      {name: 'Paris', code: 'PRS'}
-    ];
+    this.paises = ['New York', 'Rome', 'London', 'Istanbul', 'Paris'];
+    this.cliente = {
+      nome: '',
+      email: '',
+      pais: '',
+      celular: '',
+      login: {
+        usuario: '',
+        senha: ''
+      }
+    };
   }
 
   ngOnInit(): void {

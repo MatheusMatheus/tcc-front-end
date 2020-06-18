@@ -15,6 +15,8 @@ export class EventoComponent implements OnInit {
 
   isMobile = true;
 
+  odemPrecoSelecionada: string;
+
   constructor(private eventoService: EventoService) { }
 
   ngOnInit(): void {
@@ -23,8 +25,12 @@ export class EventoComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  tamanhoDaTela(event?) {
+  tamanhoDaTela() {
         this.isMobile = window.innerWidth < mobile;
+  }
+
+  get ordemPreco(): string[] {
+    return ['maior-menor', 'menor-maior'];
   }
 
 }
