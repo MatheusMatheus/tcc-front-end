@@ -3,21 +3,23 @@
   flex-direction: column;
   margin-bottom: 1.5em;
 
+
   .preco, .qtd-ingressos {
     width: 100%;
-    border: 1px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .5em;
 
+
     h1 {
-      font-size: 4.5vw;
+      color: black;
+      font-size: 1.5625em;
     }
 
     .down {
       h1 {
-        font-size: 6.5vw;
+        font-size: 1.875rem;
         margin-left: auto;
       }
     }
@@ -27,7 +29,23 @@
       flex-grow: 4;
     }
   }
+}
 
+@media all and (min-width: 300px) {
+  .ingresso {
+    .preco, .qtd-ingressos {
+
+      h1 {
+        font-size: 1em;
+      }
+
+      .down {
+        h1 {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
 }
 
 /* Tablet*/
@@ -44,7 +62,6 @@
       .down {
         h1 {
           font-size: 1.2em;
-          margin-left: auto;
         }
       }
     }

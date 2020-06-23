@@ -2,6 +2,15 @@
 
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
+@font-face {
+  font-family: raleway;
+  src: url('assets/fonts/Raleway/static/Raleway-Light.ttf') format('truetype');
+}
+
+* {
+  font-family: 'raleway';
+}
+
 html, body {
   height: 100%;
 }
@@ -9,24 +18,32 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #1c1f1f;
+  background-color: #faf8f7;
 
   li {
     color: white;
     letter-spacing: .08em;
+    border: none;
+    outline: none;
   }
 
+
+}
+
+.p-col-fixed {
+  color: black;
 }
 
 input {
-  border-radius: 4px !important;
-  width: 100% !important;
+  border-radius: 4px;
+  width: 100%;
+  outline: none;
 }
 
 h1, p, a {
-  color: white !important;
-  letter-spacing: .08em !important;
-  text-decoration: none !important;
+  color: white;
+  letter-spacing: .05em !important;
+  text-decoration: none;
 }
 
 .container {
@@ -37,17 +54,12 @@ h1, p, a {
   align-items: center;
   flex-direction: column;
   padding: 1em 0;
-  border: 1px solid red;
 }
 
 .largura-total {
   width: 100%;
   margin-bottom: 20px;
   padding: 1em;
-}
-
-button {
-  padding: .15em !important;
 }
 
 .p-col {

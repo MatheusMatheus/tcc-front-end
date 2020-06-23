@@ -1,23 +1,45 @@
-import {Component, OnInit} from '@angular/core';
-import {Evento} from '../../../dominio/Evento';
+import { Component, OnInit } from '@angular/core';
+import {Cliente} from '../../../dominio/Cliente';
 import {CategoriaEvento} from '../../../dominio/enums/CategoriaEvento';
-import {Router} from '@angular/router';
+import {Evento} from '../../../dominio/Evento';
+import {ActivatedRoute, Router} from '@angular/router';
+import {map} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-carrinho',
-  templateUrl: './carrinho.component.html',
-  styleUrls: ['./carrinho.component.scss']
+  selector: 'app-finalizar-pedido',
+  templateUrl: './finalizar-pedido.component.html',
+  styleUrls: ['./finalizar-pedido.component.scss']
 })
-export class CarrinhoComponent implements OnInit {
+export class FinalizarPedidoComponent implements OnInit {
 
-  constructor(private router: Router) {
+  pais: string;
+  paises: any[];
+  eventosInseridos: Evento[] = [];
+  quantidade = 1;
+  cliente: Cliente;
+  quantidades: number[];
+  metodoPagamento: string;
+
+  constructor(private route: ActivatedRoute) {
+    this.paises = ['New York', 'Rome', 'London', 'Istanbul', 'Paris'];
+    this.cliente = {
+      nome: '',
+      email: '',
+      pais: '',
+      celular: '',
+      login: {
+        usuario: '',
+        senha: ''
+      }
+    };
+
   }
 
-  eventosInseridos: Evento[] = [];
-  quantidades: number[];
-  quantidade = 1;
+
 
   ngOnInit(): void {
+    this.route.queryParamMap.subscribe(params => console.log(params));
+
     this.quantidades = Array(5);
     for (let i = 0; i < this.quantidades.length; i++) {
       this.quantidades[i] = i;
@@ -59,15 +81,6 @@ export class CarrinhoComponent implements OnInit {
       categoria: CategoriaEvento.show
     });
 
-  }
-
-  finalizarPedido() {
-    this.router.navigate(['finalizar-pedido'],
-      {
-        queryParams: {
-          eventosInseridos: this.eventosInseridos
-        }, queryParamsHandling: 'preserve'
-      });
   }
 
 }

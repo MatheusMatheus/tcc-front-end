@@ -1,10 +1,9 @@
-<section class="container">
   <section class="card-container">
     <div>
       <p-carousel [value]="eventos"
                   [numVisible]="4"
                   [numScroll]="3"
-                  [circular]="false"
+                  [circular]="true"
                   [responsiveOptions]="responsiveOptions"
                   class="carrossel">
         <p-header>
@@ -12,7 +11,7 @@
         </p-header>
         <ng-template let-evento pTemplate="item">
           <a routerLink="evento">
-            <div class="car-details"
+            <div class="evento-detailhe"
                  fxLayoutAlign="center"
                  fxLayout="row"
                  fxLayout.xs="row"
@@ -156,5 +155,3 @@
       </p-carousel>
     </div>
   </section>
-
-</section>

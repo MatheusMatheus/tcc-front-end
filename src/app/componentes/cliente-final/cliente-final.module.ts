@@ -23,14 +23,19 @@ import {AccordionModule} from 'primeng/accordion';
 import {EscolhaIngressoComponent} from './evento/escolha-ingresso/escolha-ingresso.component';
 import {DropdownModule} from 'primeng/dropdown';
 import {NgSelectModule} from '@ng-select/ng-select';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { FinalizarPedidoComponent } from './finalizar-pedido/finalizar-pedido.component';
+import {SelectButtonModule} from 'primeng/selectbutton';
+
 
 const rotas: Routes = [
   {path: '', component: IndexComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'recuperarSenha', component: ResetarSenhaComponent},
-  {path: 'criarConta', component: CriarContaComponent},
+  {path: 'recuperar-senha', component: ResetarSenhaComponent},
+  {path: 'criar-conta', component: CriarContaComponent},
   {path: 'carrinho', component: CarrinhoComponent},
-  {path: 'evento', component: EventoComponent}
+  {path: 'evento', component: EventoComponent},
+  {path: 'finalizar-pedido', component: FinalizarPedidoComponent}
 ];
 
 @NgModule({
@@ -44,7 +49,8 @@ const rotas: Routes = [
     CriarContaComponent,
     CarrinhoComponent,
     EventoComponent,
-    EscolhaIngressoComponent
+    EscolhaIngressoComponent,
+    FinalizarPedidoComponent
   ],
   imports: [
     CommonModule,
@@ -60,6 +66,8 @@ const rotas: Routes = [
     AccordionModule,
     DropdownModule,
     NgSelectModule,
+    RadioButtonModule,
+    SelectButtonModule,
     RouterModule.forChild(rotas),
   ],
   exports: [

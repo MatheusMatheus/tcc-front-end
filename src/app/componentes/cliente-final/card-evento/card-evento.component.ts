@@ -27,14 +27,25 @@ export class CardEventoComponent implements OnInit {
         numScroll: 3
       },
       {
-        breakpoint: '1500px',
-        numVisible: 2,
-        numScroll: 2
+        breakpoint: '1800px',
+        numVisible: 4,
+        numScroll: 4
+      },
+
+      {
+        breakpoint: '1600px',
+        numVisible: 3,
+        numScroll: 4
       },
       {
-        breakpoint: '100px',
+        breakpoint: '1100px',
+        numVisible: 2,
+        numScroll: 5
+      },
+      {
+        breakpoint: '900px',
         numVisible: 1,
-        numScroll: 1
+        numScroll: 3
       }
     ];
   }

@@ -1,25 +1,29 @@
 <header>
-  <ul #nav class="navigation" (scroll)="onScroll($event)"
-      [className]="colorido ? 'navigation colorido' : 'navigation'">
-    <li class="logo" routerLink="">EVENTOS D'AHORA</li>
+    <ul class="navigation" (scroll)="onScroll($event)"
+        [className]="colorido || isMobile ? 'navigation colorido' : 'navigation'">
 
+      <li class="toggle">
+        <i class="pi pi-bars" (click)="menu.toggle($event)"></i>
+        <p-slideMenu #menu [model]="items"
+                     [popup]="true"
+                     [viewportHeight]="340"
+                      [menuWidth]="170">
 
-    <li  [className]="exibir ? 'item active' : 'item'" >
-      Criar evento
-    </li>
-    <li [className]="exibir ? 'item active' : 'item'"
-        routerLink="login">
-      Minha conta
-    </li>
-    <li [className]="exibir ? 'item active' : 'item'"
-        routerLink="carrinho">
-      <i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i>
-    </li>
+        </p-slideMenu>
+      </li>
 
-    <li class="toggle" (click)="toggle()">
-      <i class="pi pi-bars"></i>
-    </li>
-  </ul>
+      <li class="logo" routerLink="">EVENTOS D'AHORA</li>
+
+      <li class="item">
+        Criar evento
+      </li>
+      <li class="item" routerLink="login">
+        Minha conta
+      </li>
+      <li class="carrinho" routerLink="carrinho">
+        <i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i>
+      </li>
+    </ul>
 </header>
 
 <main>
@@ -29,4 +33,5 @@
 <footer>
   <app-rodape></app-rodape>
 </footer>
+
 

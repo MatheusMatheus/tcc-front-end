@@ -9,16 +9,18 @@
 
 .escolha {
   width: 100%;
-  border: 1px solid green;
   display: flex;
   flex-flow: row wrap;
   align-content: space-between;
 
-
-  .ingresso, .assento {
+  .ingresso, .assento, .local-evento {
     width: 100%;
-    border: 1px solid blue;
     margin: 0 .5em 3em .5em;
+    border: 2px solid #999999;
+  }
+
+  .local-evento {
+    height: 200px;
   }
 
   .ingresso {
@@ -27,7 +29,6 @@
 
   .assento {
     height: auto;
-    border: 1px solid red;
     order: -1;
   }
 }
@@ -47,15 +48,20 @@
 
     li {
       padding: .7em;
-      color: white;
+      color: black;
       text-decoration: none;
       border-radius: 7px;
       align-self: center;
+
+      .select {
+        width: 150px;
+      }
     }
 
     li:hover {
       background: rgb(30, 44, 48);;
       cursor: pointer;
+      color: white;
     }
 
     li:first-child {
@@ -63,24 +69,24 @@
       font-size: 1.5em;
     }
 
-    li:first-child:hover {
+    li:last-child {
+      margin-left: auto;
+      padding-right: 0;
+    }
+
+    li:first-child:hover, li:last-child:hover  {
       background: transparent;
       cursor: auto;
     }
-
-    li:last-child {
-      margin-left: auto;
-    }
-
   }
 
 
   .escolha {
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1000px;
 
     .ingresso, .assento {
-      width: calc(50% - 45px);
+      width: calc(50% - 27px);
     }
 
     .assento {

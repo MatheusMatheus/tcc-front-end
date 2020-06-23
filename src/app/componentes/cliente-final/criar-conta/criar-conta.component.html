@@ -4,7 +4,7 @@
     <form>
       <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <label class="p-col-fixed" style="width:100px">Nome Completo</label>
+          <label class="p-col-fixed">Nome</label>
           <app-input-texto id="nome"
                      [placeholder]="'Nome Completo'"
                      required="true"
@@ -15,7 +15,7 @@
 
       <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <label for="email" class="p-col-fixed" style="width:100px">E-mail</label>
+          <label for="email" class="p-col-fixed">E-mail</label>
           <app-input-texto id="email"
                            [placeholder]="'E-mail'"
                            required="true"
@@ -26,16 +26,14 @@
 
       <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <label for="senha" class="p-col-fixed" style="width:100px">Senha</label>
+          <label for="senha" class="p-col-fixed">Senha</label>
           <app-input-texto id="senha"
                            [placeholder]="'Senha'"
                            [tipo]="'password'"
                            required="true"
                            [(ngModel)]="cliente.login.senha" name="senha">
           </app-input-texto>
-        </div>
 
-        <div class="p-col">
           <app-input-texto id="confirmaSenha"
                            [placeholder]="'Confirmação da senha'"
                            [tipo]="'password'"
@@ -47,7 +45,7 @@
 
       <div class=" p-grid p-dir-col">
         <div class="p-col">
-          <label for="pais" class="p-col-fixed" style="width:100%">País</label>
+          <label for="pais" class="p-col-fixed">País</label>
           <ng-select [items]="paises"
                      placeholder="País"
                      [clearable]="false"
@@ -59,7 +57,7 @@
         </div>
       </div>
 
-      <div class=" p-grid p-dir-col" style="margin-bottom: 20px">
+      <div class=" p-grid p-dir-col">
         <label for="celular" class="p-col-fixed">Número celular</label>
         <div class="p-col">
           <p-inputMask
@@ -69,7 +67,7 @@
         </div>
       </div>
 
-      <div class=" p-grid p-dir-col" style="margin-bottom: 20px">
+      <div class=" p-grid p-dir-col">
         <div class="p-col">
           <button label="Registrar" pButton class="ui-button-primary largura-total"></button>
         </div>

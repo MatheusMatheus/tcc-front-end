@@ -1,14 +1,11 @@
+.container {
+  padding: 6em 1em 1em 1em;
+}
+
 .login {
   width: 95%;
   justify-content: center;
   align-items: center;
-  color: white;
-}
-
-input {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 1em;
 }
 
 .titulo {
@@ -17,12 +14,18 @@ input {
   font-weight: bold;
 }
 
-span {
-  color: white;
-  letter-spacing: .08em;
-  text-decoration: none;
+a {
+  padding: 20px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
 }
 
+a:hover {
+  text-decoration: none;
+  color: black;
+}
 
 
 
@@ -32,15 +35,4 @@ span {
     width: 400px;
   }
 
-  a {
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: white;
-    text-decoration: none;
-  }
 }
