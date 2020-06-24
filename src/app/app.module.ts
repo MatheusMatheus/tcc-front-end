@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InfraModule } from './infra/infra.module';
-import { ClienteFinalModule } from './componentes/cliente-final/cliente-final.module';
-import {SlideMenuModule} from 'primeng/slidemenu';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {InfraModule} from './infra/infra.module';
+import {SidebarModule} from 'primeng/sidebar';
+
 
 @NgModule({
   declarations: [
@@ -17,8 +17,7 @@ import {SlideMenuModule} from 'primeng/slidemenu';
     AppRoutingModule,
     BrowserAnimationsModule,
     InfraModule,
-    ClienteFinalModule,
-    SlideMenuModule
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

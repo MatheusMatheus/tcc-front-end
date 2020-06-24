@@ -1,8 +1,7 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Evento} from './dominio/Evento';
 import {MenuItem} from 'primeng';
-
-const mobile = 800;
+import {Route, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,31 +10,19 @@ const mobile = 800;
 })
 export class AppComponent implements OnInit {
 
-  exibir = false;
-
-  isMobile = false;
-
   items: MenuItem[];
 
-  constructor() {
+  display = false;
+
+  constructor(private router: Router) {
   }
 
   evento: Evento;
   colorido = false;
 
-  toggle() {
-    this.exibir = !this.exibir;
-    return this.exibir;
-  }
-
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
     this.colorido = window.pageYOffset > 80;
-  }
-
-  @HostListener('window:resize', ['$event'])
-  tamanhoDaTela() {
-    this.isMobile = window.innerWidth < mobile;
   }
 
   ngOnInit(): void {
@@ -50,6 +37,7 @@ export class AppComponent implements OnInit {
       { label: 'Artes' },
     ];
   }
+
 
 
 }

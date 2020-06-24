@@ -12,16 +12,11 @@
 }
 
 .colorido {
-  transition-duration: .5s;
   background: #faf8f7;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
   -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
   height: auto;
-
-  li {
-    color: white;
-  }
 }
 
 
@@ -48,17 +43,31 @@
   font-size: 1.5em;
 }
 
+.menu-mobile {
+  padding: 0;
+  li {
+    z-index: 200;
+  }
+
+  li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 
 @media all and (max-width: 800px) {
   .navigation {
     justify-content: space-between;
     padding: 0;
+    background-color: black;
   }
   .navigation li {
     text-align: center;
     padding: 10px;
     width: 100%;
     flex-grow: 1;
+    color: white;
   }
 
   .navigation li.toggle {
