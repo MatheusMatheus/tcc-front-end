@@ -16,12 +16,21 @@ const routes: Routes = [
     path: 'checkout',
     loadChildren: () => import('./componentes/cliente-final/negocio/checkout/checkout.module')
       .then(m => m.CheckoutModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./componentes/criador-evento/dashboard/dashboard.module')
+      .then(m => m.DashboardModule)
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      scrollPositionRestoration: 'enabled',
+      enableTracing: false
+    })
   ],
   exports: [RouterModule]
 })

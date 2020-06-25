@@ -7,7 +7,7 @@
         <p-sidebar [(visible)]="display" [baseZIndex]="300" [style]="{width:'100%'}">
           <ul class="menu-mobile">
             <li *ngFor="let item of items"
-              style="color: black; z-index: 200; font-weight: 700"
+              style="color: black; z-index: 200; font-weight: 700; padding: 1em"
             >{{item.label}}</li>
           </ul>
         </p-sidebar>
@@ -31,8 +31,8 @@
   <router-outlet></router-outlet>
 </main>
 
-<!--<footer>
+<footer>
   <app-rodape></app-rodape>
-</footer>-->
+</footer>
 
 

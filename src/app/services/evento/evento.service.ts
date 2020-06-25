@@ -9,6 +9,14 @@ export class EventoService {
 
   constructor() { }
 
+  public criaEventos(): Evento[] {
+    const eventos: Evento[] = [];
+    for (let i = 0; i < 10; i++) {
+      eventos.push(this.criaEvento());
+    }
+    return eventos;
+  }
+
   criaEvento(): Evento {
     return {
       nome: 'Guns and Roses',

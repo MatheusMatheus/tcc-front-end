@@ -7,7 +7,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InfraModule} from './infra/infra.module';
 import {SidebarModule} from 'primeng/sidebar';
 
-
 @NgModule({
   declarations: [
     AppComponent

@@ -5,8 +5,7 @@
 
 import {Component, OnInit} from '@angular/core';
 import {Evento} from 'src/app/dominio/Evento';
-import {CategoriaEvento} from 'src/app/dominio/enums/CategoriaEvento';
-import {ActivatedRoute} from '@angular/router';
+import {EventoService} from '../../../../services/evento/evento.service';
 
 @Component({
   selector: 'app-card-evento',
@@ -19,7 +18,7 @@ export class CardEventoComponent implements OnInit {
 
   responsiveOptions;
 
-  constructor(private router: ActivatedRoute) {
+  constructor(private eventoService: EventoService) {
     this.responsiveOptions = [
       {
         breakpoint: '2000px',
@@ -50,157 +49,8 @@ export class CardEventoComponent implements OnInit {
     ];
   }
 
-  mostraRota() {
-    console.log(this.router);
-  }
-
   ngOnInit(): void {
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Guns and Roses',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Gretchen',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventos.push({
-      nome: 'Tiririca',
-      local: 'Mane Garrincha',
-      data: new Date().toLocaleDateString(),
-      hora: '20:00',
-      valor: 350,
-      categoria: CategoriaEvento.show
-    });
-
-
+    this.eventos = this.eventoService.criaEventos();
   }
 
 }

@@ -7,15 +7,14 @@
   width: 100%;
   margin: 0 0 1.5em 0;
   list-style: none;
-  padding: 0 3em 0 3em;
   transition-duration: .5s;
 }
 
 .colorido {
   background: #faf8f7;
-  -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
   height: auto;
 }
 
@@ -23,7 +22,7 @@
 .navigation li {
   text-decoration: none;
   display: flex;
-  padding: 1em;
+  padding: .6em;
   color: black;
   align-self: center;
 }
@@ -45,9 +44,6 @@
 
 .menu-mobile {
   padding: 0;
-  li {
-    z-index: 200;
-  }
 
   li:hover {
     cursor: pointer;
