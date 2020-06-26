@@ -6,7 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {CriarContaComponent} from './criar-conta/criar-conta.component';
 import {LoginComponent} from './login/login.component';
 import {ResetarSenhaComponent} from './resetar-senha/resetar-senha.component';
-import {ButtonModule, CardModule, InputMaskModule, InputTextModule} from 'primeng';
+import {ButtonModule, CardModule, InputMaskModule} from 'primeng';
 import {NgSelectModule} from '@ng-select/ng-select';
 
 const rotas: Routes = [

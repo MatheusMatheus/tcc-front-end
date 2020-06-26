@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {InputComponent} from '../input/input.component';
 
 @Component({
   selector: 'app-input-calendar',
   templateUrl: './input-calendar.component.html',
   styleUrls: ['./input-calendar.component.scss']
 })
-export class InputCalendarComponent implements OnInit {
+export class InputCalendarComponent extends InputComponent {
 
-  constructor() { }
+  data: Date;
 
-  ngOnInit(): void {
+  constructor() {
+    super();
   }
 
 }

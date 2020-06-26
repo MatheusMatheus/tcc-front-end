@@ -2,71 +2,46 @@
   <div class="registrar p-grid">
     <div class="titulo">Nova conta</div>
     <form>
-      <div class=" p-grid p-dir-col">
-        <div class="p-col">
-          <label class="p-col-fixed">Nome</label>
-          <app-input-texto id="nome"
-                     [placeholder]="'Nome Completo'"
-                     required="true"
-                     [(ngModel)]="cliente.nome" name="nome">
-          </app-input-texto>
-        </div>
-      </div>
+      <app-input-texto id="nome"
+                       [placeholder]="'Nome Completo'"
+                       [label]="'Nome'"
+                       required="true"
+                       [(ngModel)]="cliente.nome" name="nome">
+      </app-input-texto>
 
-      <div class=" p-grid p-dir-col">
-        <div class="p-col">
-          <label for="email" class="p-col-fixed">E-mail</label>
-          <app-input-texto id="email"
-                           [placeholder]="'E-mail'"
-                           required="true"
-                           [(ngModel)]="cliente.email" name="email">
-          </app-input-texto>
-        </div>
-      </div>
+      <app-input-texto id="email"
+                       [placeholder]="'E-mail'"
+                       [label]="'E-mail'"
+                       required="true"
+                       [(ngModel)]="cliente.email" name="email">
+      </app-input-texto>
 
-      <div class=" p-grid p-dir-col">
-        <div class="p-col">
-          <label for="senha" class="p-col-fixed">Senha</label>
-          <app-input-texto id="senha"
-                           [placeholder]="'Senha'"
-                           [tipo]="'password'"
-                           required="true"
-                           [(ngModel)]="cliente.login.senha" name="senha">
-          </app-input-texto>
+      <app-input-texto id="senha"
+                       [label]="'Senha'"
+                       [placeholder]="'Senha'"
+                       [tipo]="'password'"
+                       required="true"
+                       [(ngModel)]="cliente.login.senha" name="senha">
+      </app-input-texto>
 
-          <app-input-texto id="confirmaSenha"
-                           [placeholder]="'Confirmação da senha'"
-                           [tipo]="'password'"
-                           required="true"
-                           [(ngModel)]="cliente.login.senha" name="senha">
-          </app-input-texto>
-        </div>
-      </div>
+      <app-input-texto id="confirmaSenha"
+                       [placeholder]="'Confirmação da senha'"
+                       [tipo]="'password'"
+                       required="true"
+                       [(ngModel)]="cliente.login.senha" name="senha">
+      </app-input-texto>
 
-      <div class=" p-grid p-dir-col">
-        <div class="p-col">
-          <label for="pais" class="p-col-fixed">País</label>
-          <ng-select [items]="paises"
-                     placeholder="País"
-                     [clearable]="false"
-                     [searchable]="false"
-                     [(ngModel)]="pais"
-                     name="pais"
-                     id="pais"
-                     class="select">
-          </ng-select>
-        </div>
-      </div>
+      <app-select [label]="'País'"
+                  [id]="pais"
+                  [itens]="paises">
 
-      <div class=" p-grid p-dir-col">
-        <label class="p-col-fixed">Número celular</label>
-        <div class="p-col">
-          <app-input-mask [id]="'celular'"
-                          [mask]="'+99 (99)-9999-9999'"
-                          [placeholder]="'(99)-9999-9999'">
-          </app-input-mask>
-        </div>
-      </div>
+      </app-select>
+
+      <app-input-mask [id]="'celular'"
+                      [mask]="'+99 (99)-9999-9999'"
+                      [placeholder]="'(99)-9999-9999'"
+                      [label]="'Número celular'">
+      </app-input-mask>
 
       <div class=" p-grid p-dir-col">
         <div class="p-col">
@@ -78,7 +53,7 @@
     <hr>
 
     <div style="text-align: center">
-      <span>Já possui uma conta? </span><a routerLink="/login">Realizar login</a>
+      <span>Já possui uma conta? </span><a routerLink="/conta/login">Realizar login</a>
     </div>
   </div>
 

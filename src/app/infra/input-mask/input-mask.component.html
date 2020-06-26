@@ -1,5 +1,12 @@
-<p-inputMask
-  id="{{id}}"
-  mask="{{mask}}"
-  placeholder="{{placeholder}}">
-</p-inputMask>
+<div class=" p-grid p-dir-col">
+  <label class="p-col-fixed" *ngIf="label">{{label}}</label>
+  <div class="p-col">
+    <p-inputMask
+      id="{{id}}"
+      name="{{val}}"
+      mask="{{mask}}"
+      [(ngModel)]="val"
+      placeholder="{{placeholder}}">
+    </p-inputMask>
+  </div>
+</div>

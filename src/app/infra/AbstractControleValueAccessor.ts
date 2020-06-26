@@ -3,23 +3,32 @@ import {Input} from '@angular/core';
 
 export class AbstractControleValueAccessor implements ControlValueAccessor {
 
-  @Input() valor = '';
+  @Input() val: any;
 
-  onChange = (_: any) => { };
+  onChange: any = () => {};
+  onTouch: any = () => {};
 
-  onTouched = () => {};
+  set value(val) {
+    if (val !== undefined && this.val !== val) {
+      this.val = val;
+      this.onChange(val);
+      this.onTouch(val);
+    }
 
-  registerOnChange(fn: any): void {
+  }
+
+  writeValue(value: any) {
+    this.value = value;
+  }
+
+  registerOnChange(fn: any) {
     this.onChange = fn;
   }
 
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn;
+  registerOnTouched(fn: any) {
+    this.onTouch = fn;
   }
 
-  writeValue(val: any): void {
-    this.valor = val;
-  }
 
 
 }

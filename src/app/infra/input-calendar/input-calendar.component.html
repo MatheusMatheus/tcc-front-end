@@ -1,1 +1,11 @@
-<p-calendar [(ngModel)]="date1"></p-calendar>
+<p-calendar [(ngModel)]="data"></p-calendar>
+
+<div class=" p-grid p-dir-col">
+  <label class="p-col-fixed" *ngIf="label">{{label}}</label>
+  <div class="p-col">
+     <p-calendar placeholder="{{placeholder}}"
+                 [(ngModel)]="val"
+                 (ngModelChange)="onChange($event)">
+     </p-calendar>
+  </div>
+</div>

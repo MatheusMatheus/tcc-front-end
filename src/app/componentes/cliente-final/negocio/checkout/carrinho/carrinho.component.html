@@ -31,15 +31,8 @@
           <hr>
 
           <div class="conteudo-horizontal">
-            <div>
-              <ng-select [items]="quantidades"
-                         [clearable]="false"
-                         [searchable]="false"
-                         [(ngModel)]="quantidade"
-                         name="quantidade"
-                         id="quantidade">
-              </ng-select>
-            </div>
+            <app-select [itens]="quantidades" [id]="'quantidade'">
+            </app-select>
 
             <div class="excluir">
               <a>Excluir</a>
