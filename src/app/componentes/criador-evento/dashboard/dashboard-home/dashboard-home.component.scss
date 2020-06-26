@@ -1,12 +1,41 @@
 .dashboard-container {
-  padding: 6em 1em 1em 1em;
+  padding: 4.5em 1em 1em 1em;
 }
 
-.box {
-  background-color: #cce4f7;
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-radius: 4px;
-  color: #333333;
+.totalizacao {
+  display: flex;
+  justify-content: center;
+
+  .icone, .desc {
+    padding: .5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+
+  .icone {
+    background-color: #2E7D32;
+    padding: 0 2em;
+  }
+
+  .desc {
+    background-color: #4CAF50;
+    width: 100%;
+
+    .titulo {
+      font-size: 20px;
+      display: inline-block;
+      margin: 4px 0 10px 0;
+      color: #ffffff;
+    }
+
+    .valor {
+      color: #ffffff;
+      font-size: 36px;
+    }
+  }
 }
+
+

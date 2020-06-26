@@ -1,14 +1,17 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TipoGrafico} from '../../util/dominio/enums/TipoGrafico';
+import {MessageService} from 'primeng';
 
 @Component({
   selector: 'app-card-analytics',
   templateUrl: './card-analytics.component.html',
-  styleUrls: ['./card-analytics.component.scss']
+  styleUrls: ['./card-analytics.component.scss'],
+  providers: [MessageService]
 })
 export class CardAnalyticsComponent implements OnInit {
 
   @Input()
-  header: string;
+  header ?: string;
 
   @Input()
   valorEstatistica: number;
@@ -16,9 +19,20 @@ export class CardAnalyticsComponent implements OnInit {
   @Input()
   periodo: string;
 
+  @Input()
+  tipoGrafico: TipoGrafico;
+
+  graficoBarra = false;
+
+  graficoProgresso = false;
+
+  graficoLinha = false;
+
+  graficoPizza = false;
+
   data: any;
 
-  constructor() {
+  constructor(private messageService: MessageService) {
     this.data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
@@ -26,6 +40,7 @@ export class CardAnalyticsComponent implements OnInit {
           label: '',
           backgroundColor: '#42A5F5',
           data: [65, 59, 80, 81, 56, 55, 40],
+          fill: false,
           options: {
             legend: {
               display: false
@@ -37,10 +52,23 @@ export class CardAnalyticsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.graficoBarra = TipoGrafico.BARRA === this.tipoGrafico;
+    this.graficoProgresso = TipoGrafico.PROGRESSO === this.tipoGrafico;
+    this.graficoLinha = TipoGrafico.LINHA === this.tipoGrafico;
+    this.graficoPizza = TipoGrafico.PIZZA === this.tipoGrafico;
   }
 
   getTitulo() {
     return `${this.valorEstatistica} / ${this.periodo}`;
+  }
+
+  selectData(event) {
+    this.messageService.add(
+      {
+        severity: 'info',
+        summary: 'Data Selected',
+        detail: this.data.datasets[event.element._datasetIndex].data[event.element._index]
+      });
   }
 
 }

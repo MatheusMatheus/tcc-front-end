@@ -15,13 +15,16 @@ const rotas: Routes = [
 ];
 
 @NgModule({
-  declarations: [ListagemEventoComponent, CriarEventoComponent, CrudEventoComponent],
-  imports: [
-    CommonModule,
-    TableModule,
-    CardModule,
-    RouterModule.forChild(rotas),
-    ButtonModule
-  ]
+    declarations: [ListagemEventoComponent, CriarEventoComponent, CrudEventoComponent],
+    exports: [
+        ListagemEventoComponent
+    ],
+    imports: [
+        CommonModule,
+        TableModule,
+        CardModule,
+        RouterModule.forChild(rotas),
+        ButtonModule
+    ]
 })
 export class CrudEventoModule { }

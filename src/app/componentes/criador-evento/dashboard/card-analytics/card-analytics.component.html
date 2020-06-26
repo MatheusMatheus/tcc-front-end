@@ -1,9 +1,29 @@
 <p-card header="{{getTitulo()}}" styleClass="ui-card-shadow">
   <p-header>
-    <div class="cabecalho">
+    <div class="cabecalho" *ngIf="header">
       {{header}}
       <span>+ 60%</span>
     </div>
   </p-header>
-  <p-chart type="bar" [data]="data"></p-chart>
+
+  <p-progressBar [value]="60" *ngIf="graficoProgresso"></p-progressBar>
+
+  <p-chart type="{{tipoGrafico.valueOf()}}"
+           [data]="data"
+           (onDataSelect)="selectData($event)"
+           *ngIf="graficoLinha">
+  </p-chart>
+
+  <p-chart type="{{tipoGrafico.valueOf()}}"
+           [data]="data"
+           (onDataSelect)="selectData($event)"
+           *ngIf="graficoBarra">
+  </p-chart>
+
+  <p-chart type="{{tipoGrafico.valueOf()}}"
+           [data]="data"
+           (onDataSelect)="selectData($event)"
+           *ngIf="graficoPizza">
+  </p-chart>
+
 </p-card>

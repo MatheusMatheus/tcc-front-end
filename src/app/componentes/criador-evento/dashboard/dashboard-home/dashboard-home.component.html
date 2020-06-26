@@ -1,23 +1,108 @@
-<section class="p-grid p-justify-center dashboard-container">
+<section class="dashboard-container">
 
-  <div class="p-col">
-    <app-card-analytics [header]="'Vendas'"
-                        [valorEstatistica]="9846.44"
-                        [periodo]="'semana'">
-    </app-card-analytics>
+  <div class="p-grid p-justify-center">
+    <div class="p-col-12 p-md-4 p-lg-4">
+      <app-card-analytics [header]="'Vendas'"
+                          [valorEstatistica]="9846.44"
+                          [tipoGrafico]="graficoProgresso"
+                          [periodo]="'semana'">
+      </app-card-analytics>
+    </div>
+    <div class="p-col-12 p-md-4 p-lg-4">
+      <app-card-analytics [header]="'Visualizações'"
+                          [valorEstatistica]="9846.44"
+                          [tipoGrafico]="graficoProgresso"
+                          [periodo]="'dia'">
+      </app-card-analytics>
+    </div>
+    <div class="p-col-12 p-md-4 p-lg-4">
+      <app-card-analytics [header]="'Usuários'"
+                          [valorEstatistica]="9846.44"
+                          [tipoGrafico]="graficoProgresso"
+                          [periodo]="'dia'">
+      </app-card-analytics>
+    </div>
   </div>
-  <div class="p-col">
-    <app-card-analytics [header]="'Visualizações'"
-                        [valorEstatistica]="9846.44"
-                        [periodo]="'dia'">
-    </app-card-analytics>
-  </div>
-  <div class="p-col">
-    <app-card-analytics [header]="'Usuários'"
-                        [valorEstatistica]="9846.44"
-                        [periodo]="'dia'">
-    </app-card-analytics>
+
+  <div class="p-grid">
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <div class="totalizacao">
+        <div class="icone">
+          <i class="pi pi-check"></i>
+        </div>
+
+        <div class="desc">
+          <span class="titulo">Tarefas</span>
+          <span class="valor">50</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <div class="totalizacao">
+        <div class="icone">
+          <i class="pi pi-check"></i>
+        </div>
+
+        <div class="desc">
+          <span class="titulo">Tarefas</span>
+          <span class="valor">50</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <div class="totalizacao">
+        <div class="icone">
+          <i class="pi pi-check"></i>
+        </div>
+
+        <div class="desc">
+          <span class="titulo">Tarefas</span>
+          <span class="valor">50</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <div class="totalizacao">
+        <div class="icone">
+          <i class="pi pi-check"></i>
+        </div>
+
+        <div class="desc">
+          <span class="titulo">Tarefas</span>
+          <span class="valor">50</span>
+        </div>
+      </div>
+    </div>
   </div>
 
 
+  <div class="p-grid p-justify-center p-align-stretch">
+
+    <div class="p-col-12 p-md-7 p-lg-7">
+      <app-listagem-evento [eventos]="eventos"></app-listagem-evento>
+    </div>
+    <div class="p-col-12 p-md-5 p-lg-5">
+      <app-card-analytics [header]="'Usuários'"
+                          [valorEstatistica]="9846.44"
+                          [tipoGrafico]="graficoLinha"
+                          [periodo]="'dia'">
+      </app-card-analytics>
+    </div>
+  </div>
+
+  <div class="p-grid p-justify-center p-align-stretch">
+    <div class="p-col-12 p-md-6 p-lg-6">
+      <app-card-analytics [header]="'Usuários'"
+                          [valorEstatistica]="9846.44"
+                          [tipoGrafico]="graficoLinha"
+                          [periodo]="'dia'">
+      </app-card-analytics>
+    </div>
+    <div class="p-col-12 p-md-6 p-lg-6">
+     <app-calendario-eventos></app-calendario-eventos>
+    </div>
+  </div>
 </section>
