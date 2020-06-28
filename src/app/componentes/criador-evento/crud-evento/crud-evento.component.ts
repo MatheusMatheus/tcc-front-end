@@ -24,8 +24,8 @@ export class CrudEventoComponent implements OnInit {
     this.items = [{
       label: 'Eventos',
       items: [
-        {label: 'Criar Evento', icon: 'pi pi-fw pi-plus', routerLink: 'criar'},
-        {label: 'Criar Ticket', icon: 'pi pi-ticket'},
+        {label: 'Criar Evento', icon: 'pi pi-fw pi-plus', routerLink: 'criar-evento'},
+        {label: 'Criar Ingresso', icon: 'pi pi-ticket', routerLink: 'criar-ingresso'},
         {label: 'Lista de Convidados', icon: 'pi pi-users'},
         {label: 'Calendário de Eventos', icon: 'pi pi-calendar', routerLink: 'calendario'}
       ]

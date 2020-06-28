@@ -28,10 +28,33 @@
       </app-input-texto>
     </div>
 
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-input-texto id="qtdMinima"
+                     [label]="'Quantidade mínima'"
+                     [placeholder]="'Quantidade mínima'"
+                     [tipo]="'number'"
+                     required="true">
+    </app-input-texto>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-input-texto id="qtdMaxima"
+                     [label]="'Quantidade máxima'"
+                     [placeholder]="'Quantidade máxima'"
+                     [tipo]="'number'"
+                     required="true"
+                     [(ngModel)]="evento.nome" name="tituloEvento">
+    </app-input-texto>
+  </div>
+
     <div class="p-col-12 p-md-12 p-lg-12">
       <div class="p-grid p-align-center">
         <div class="p-col-12 p-md-8 p-lg-8">
-          <app-select [label]="'Tipo'" [placeholder]="'Tipo do evento'" [itens]="categorias"></app-select>
+          <app-select [label]="'Tipo'"
+                      [placeholder]="'Tipo do evento'"
+                      [itens]="categorias"
+                      [(ngModel)]="evento.categoria">
+          </app-select>
         </div>
 
         <div class="p-col-12 p-md-4 p-lg-4">
@@ -44,6 +67,16 @@
         </div>
       </div>
     </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <hr>
+    <h2>Local</h2>
+    <p style="color: #1c1f1f">Depois eu integro com uma API de mapas de verdade</p>
+  </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <img src="/assets/mapa.png" style="width: 100%" />
+  </div>
 
   <div class="p-col-12 p-md-12 p-lg-12">
     <hr>
@@ -63,7 +96,7 @@
     <app-input-calendar id="horaEvento"
                         [label]="'Horário'"
                         [placeholder]="'O evento começa às'"
-                        required="true"
+                        [required]="true"
                         [somenteHorario]="true"
                         [(ngModel)]="evento.hora" name="horaEvento">
     </app-input-calendar>
@@ -80,6 +113,19 @@
 
   <div class="p-col-12 p-md-6 p-lg-6">
     <app-upload [label]="'Imagem Secundária do Evento'"></app-upload>
+  </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <hr>
+    <div class="criar-evento">
+      <p-radioButton name="termos"
+                     value="false"
+                     label="Concordo com os termos de uso"
+                     inputId="termos">
+      </p-radioButton>
+      <button label="Criar evento" pButton class="ui-button-primary"></button>
+    </div>
+
   </div>
 </form>
 

@@ -5,7 +5,7 @@
 
        <a href=""> <h1 >{{ evento.nome }}</h1> </a>
         <p><strong>{{ evento.local }}</strong></p>
-        <p><strong>Ingressos a partir de {{ evento.valor}}</strong></p>
+        <p><strong>Ingressos a partir de {{ evento.ingressos[0].preco}}</strong></p>
 
        <div class="input" [ngStyle]="{'display': mostrarBusca ? 'block' : 'none' }">
         <app-input-busca></app-input-busca>

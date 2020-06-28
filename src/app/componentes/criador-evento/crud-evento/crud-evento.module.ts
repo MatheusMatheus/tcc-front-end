@@ -10,13 +10,17 @@ import {CrudEventoRoutingModule} from './crud-evento-routing.module';
 import {InfraModule} from '../../../infra/infra.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
+import {CriarIngressoComponent} from './criar-ingresso/criar-ingresso.component';
+import {AccordionModule} from 'primeng/accordion';
+import { TipoPrecoComponent } from './criar-ingresso/tipo-preco/tipo-preco.component';
 
 @NgModule({
     declarations: [
       ListagemEventoComponent,
       CriarEventoComponent,
-      CrudEventoComponent
+      CrudEventoComponent,
+      CriarIngressoComponent,
+      TipoPrecoComponent,
     ],
     exports: [
         ListagemEventoComponent
@@ -31,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     CrudEventoRoutingModule,
     InfraModule,
     RadioButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    AccordionModule
   ]
 })
 export class CrudEventoModule { }

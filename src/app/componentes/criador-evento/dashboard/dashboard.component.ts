@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
           {label: 'Detalhe', icon: 'pi pi-search'}
         ]
       },
-      {label: 'Novo Evento', icon: 'pi pi-plus', routerLink: 'gerenciar-evento/crud/criar'
+      {label: 'Novo Evento', icon: 'pi pi-plus', routerLink: 'gerenciar-evento/crud/criar-evento'
       },
       {
         label: 'Conta',

@@ -1,0 +1,44 @@
+<form class="p-grid">
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <h1>Criar Ingresso</h1>
+    <hr>
+  </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <app-select [label]="'Evento'"
+                [placeholder]="'Selecione um evento'"
+                [itens]="eventos"
+                [(ngModel)]="evento">
+    </app-select>
+  </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <div class="p-grid">
+      <div class="p-col-12 p-md-10 p-lg-10">
+        <app-input-texto id="addTipo"
+                         [label]="'Tipo de Ingresso'"
+                         [placeholder]="'Adicionar tipo de ingresso'"
+                         [tipo]="'text'"
+                         [(ngModel)]="tipoIngresso" name="addTipo"
+                         required="true">
+        </app-input-texto>
+      </div>
+
+      <div class="p-col-12 p-md-2 p-lg-2">
+        <br>
+        <button pButton label="Criar evento"
+                class="ui-button-primary"
+                (click)="notificarFilho()"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col-12 p-md-812 p-lg-12">
+    <app-tipo-preco [evento]="evento" [tipoIngressoSubject]="ingressoSubject">
+
+    </app-tipo-preco>
+  </div>
+
+
+</form>
+

@@ -19,25 +19,47 @@ export class EventoService {
 
   criaEvento(): Evento {
     return {
+      id: 'X45A54E',
+      ingressos: [{
+        id: 'F131H351',
+        preco: 350,
+        tipo: String(CategoriaEvento.show),
+        meiaEntrada: false
+      }],
+      qtdMaxima: 0,
+      qtdMinima: 0,
       nome: 'Abestado',
       local: 'Mane Garrincha',
       data: new Date().toLocaleDateString(),
       hora: '20:00',
-      valor: 350,
       menorDesacompanhado: false,
-      categoria: CategoriaEvento.show
+      categoria: CategoriaEvento.show,
+      organizador: 'Matheus Lindo Produções'
     };
   }
 
   criaEventoVazio(): Evento {
     return {
+      id: '',
+      ingressos: [],
+      qtdMaxima: 0,
+      qtdMinima: 0,
       nome: '',
       local: '',
       data: new Date().toLocaleDateString(),
       hora: '',
-      valor: 0,
       menorDesacompanhado: false,
-      categoria: CategoriaEvento.show
+      categoria: CategoriaEvento.show,
+      organizador: ''
+    };
+  }
+
+  criarIngressoVazio() {
+    return {
+      id: '',
+      preco: 0,
+      tipo: '',
+      meiaEntrada: false
     };
   }
 

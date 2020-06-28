@@ -10,7 +10,6 @@ import {EventoComponent} from './evento/main/evento.component';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {AccordionModule, ButtonModule, CardModule, RadioButtonModule} from 'primeng';
 import {ViewModule} from '../../view/view.module';
-import {GMapModule} from 'primeng/gmap';
 
 
 const rotas: Routes = [
@@ -31,7 +30,6 @@ const rotas: Routes = [
         AccordionModule,
         RadioButtonModule,
         ButtonModule,
-        GMapModule,
         ViewModule,
         CommonModule,
         FormsModule,
