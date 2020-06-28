@@ -8,7 +8,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {EscolhaIngressoComponent} from './evento/escolha-ingresso/escolha-ingresso.component';
 import {EventoComponent} from './evento/main/evento.component';
 import {NgSelectModule} from '@ng-select/ng-select';
-import {AccordionModule, ButtonModule, RadioButtonModule} from 'primeng';
+import {AccordionModule, ButtonModule, CardModule, RadioButtonModule} from 'primeng';
 import {ViewModule} from '../../view/view.module';
 import {GMapModule} from 'primeng/gmap';
 
@@ -26,18 +26,19 @@ const rotas: Routes = [
     EscolhaIngressoComponent,
     EventoComponent
   ],
-  imports: [
-    NgSelectModule,
-    AccordionModule,
-    RadioButtonModule,
-    ButtonModule,
-    GMapModule,
-    ViewModule,
-    CommonModule,
-    FormsModule,
-    InfraModule,
-    RouterModule.forChild(rotas)
-  ]
+    imports: [
+        NgSelectModule,
+        AccordionModule,
+        RadioButtonModule,
+        ButtonModule,
+        GMapModule,
+        ViewModule,
+        CommonModule,
+        FormsModule,
+        InfraModule,
+        RouterModule.forChild(rotas),
+        CardModule
+    ]
 })
 export class CheckoutModule {
 }

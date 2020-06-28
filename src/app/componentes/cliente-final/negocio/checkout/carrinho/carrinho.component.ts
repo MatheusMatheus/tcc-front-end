@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Evento} from '../../../../../dominio/Evento';
 import {CategoriaEvento} from '../../../../../dominio/enums/CategoriaEvento';
 import {Router} from '@angular/router';
+import {EventoService} from '../../../../../services/evento/evento.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -10,7 +11,8 @@ import {Router} from '@angular/router';
 })
 export class CarrinhoComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private eventoService: EventoService) {
   }
 
   eventosInseridos: Evento[] = [];
@@ -23,42 +25,7 @@ export class CarrinhoComponent implements OnInit {
       this.quantidades[i] = i;
     }
 
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses asdasdsdas asddsadsd',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
-
+    this.eventosInseridos = this.eventoService.criaEventos();
   }
 
   finalizarPedido() {

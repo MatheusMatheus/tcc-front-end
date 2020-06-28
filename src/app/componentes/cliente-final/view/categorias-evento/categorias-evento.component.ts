@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
+import {EventoService} from '../../../../services/evento/evento.service';
 
 @Component({
   selector: 'categorias-evento',
@@ -10,21 +11,9 @@ export class CategoriasEventoComponent implements OnInit {
 
   categorias: string[] = [];
 
-  constructor() { }
+  constructor(private eventoService: EventoService) { }
 
   ngOnInit(): void {
-    this.getCategorias();
+    this.categorias = this.eventoService.getCategorias();
   }
-
-  // TODO: Buscar categorias de eventos em algum serviço a ser criado
-  // TODO: Criar serviço de busca de categorias de eventos
-
-  getCategorias() {
-    for (const value in CategoriaEvento) {
-      if (typeof CategoriaEvento[value] === 'number') {
-        this.categorias.push(value);
-      }
-    }
-  }
-
 }

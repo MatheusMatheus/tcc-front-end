@@ -4,6 +4,7 @@ import {CategoriaEvento} from '../../../../../dominio/enums/CategoriaEvento';
 import {Evento} from '../../../../../dominio/Evento';
 import {ActivatedRoute, Router} from '@angular/router';
 import {map} from 'rxjs/operators';
+import {EventoService} from '../../../../../services/evento/evento.service';
 
 @Component({
   selector: 'app-finalizar-pedido',
@@ -20,7 +21,8 @@ export class FinalizarPedidoComponent implements OnInit {
   quantidades: number[];
   metodoPagamento: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+              private eventoService: EventoService) {
     this.paises = ['New York', 'Rome', 'London', 'Istanbul', 'Paris'];
     this.cliente = {
       nome: '',
@@ -45,41 +47,9 @@ export class FinalizarPedidoComponent implements OnInit {
       this.quantidades[i] = i;
     }
 
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses asdasdsdas asddsadsd',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
+    this.eventosInseridos = this.eventoService.criaEventos();
 
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
 
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
-
-    this.eventosInseridos.push({
-      nome: 'Guns and Roses',
-      local: 'Brasília',
-      data: new Date().toLocaleDateString(),
-      hora: '00:00',
-      valor: 450,
-      categoria: CategoriaEvento.show
-    });
 
   }
 

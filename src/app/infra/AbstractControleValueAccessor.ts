@@ -1,6 +1,7 @@
 import {ControlValueAccessor} from '@angular/forms';
-import {Input} from '@angular/core';
+import { Input, Directive } from '@angular/core';
 
+@Directive()
 export class AbstractControleValueAccessor implements ControlValueAccessor {
 
   @Input() val: any;

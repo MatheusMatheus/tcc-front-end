@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-totalizacao',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./totalizacao.component.scss']
 })
 export class TotalizacaoComponent implements OnInit {
+
+  @Input()
+  titulo: string;
+
+  @Input()
+  valor: string;
 
   constructor() { }
 

@@ -20,15 +20,10 @@ export class CardAnalyticsComponent implements OnInit {
   periodo: string;
 
   @Input()
-  tipoGrafico: TipoGrafico;
+  tipoGrafico ?: TipoGrafico;
 
-  graficoBarra = false;
 
   graficoProgresso = false;
-
-  graficoLinha = false;
-
-  graficoPizza = false;
 
   data: any;
 
@@ -52,10 +47,7 @@ export class CardAnalyticsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.graficoBarra = TipoGrafico.BARRA === this.tipoGrafico;
     this.graficoProgresso = TipoGrafico.PROGRESSO === this.tipoGrafico;
-    this.graficoLinha = TipoGrafico.LINHA === this.tipoGrafico;
-    this.graficoPizza = TipoGrafico.PIZZA === this.tipoGrafico;
   }
 
   getTitulo() {

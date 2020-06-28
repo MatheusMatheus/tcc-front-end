@@ -11,19 +11,7 @@
   <p-chart type="{{tipoGrafico.valueOf()}}"
            [data]="data"
            (onDataSelect)="selectData($event)"
-           *ngIf="graficoLinha">
-  </p-chart>
-
-  <p-chart type="{{tipoGrafico.valueOf()}}"
-           [data]="data"
-           (onDataSelect)="selectData($event)"
-           *ngIf="graficoBarra">
-  </p-chart>
-
-  <p-chart type="{{tipoGrafico.valueOf()}}"
-           [data]="data"
-           (onDataSelect)="selectData($event)"
-           *ngIf="graficoPizza">
+           *ngIf="!graficoProgresso">
   </p-chart>
 
 </p-card>

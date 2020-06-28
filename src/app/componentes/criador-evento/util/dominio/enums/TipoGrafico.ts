@@ -2,5 +2,6 @@ export enum TipoGrafico {
   BARRA = 'bar',
   PIZZA = 'pie',
   PROGRESSO = 'progress',
-  LINHA = 'line'
+  LINHA = 'line',
+  DOUGHNUT = 'doughnut'
 }

@@ -1,11 +1,7 @@
-<div class=" p-grid p-dir-col">
-  <label class="p-col-fixed" *ngIf="label">{{label}}</label>
-  <div class="p-col">
-    <input placeholder="{{placeholder}}"
-           [(ngModel)]="val"
-           (ngModelChange)="onChange($event)"
-           [type]="tipo"
-           name="value"
-           pInputText/>
-  </div>
-</div>
+<label *ngIf="label">{{label}}</label>
+  <input placeholder="{{placeholder}}"
+         [(ngModel)]="val"
+         (ngModelChange)="onChange($event)"
+         [type]="tipo"
+         name="value"
+         pInputText/>

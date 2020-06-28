@@ -11,7 +11,8 @@ import { InputMaskComponent } from './input-mask/input-mask.component';
 import { InputCalendarComponent } from './input-calendar/input-calendar.component';
 import { SelectComponent } from './select/select.component';
 import {NgSelectModule} from '@ng-select/ng-select';
-
+import { UploadComponent } from './upload/upload.component';
+import {FileUploadModule} from 'primeng/fileupload';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {NgSelectModule} from '@ng-select/ng-select';
     InputTextoComponent,
     InputMaskComponent,
     InputCalendarComponent,
-    SelectComponent
+    SelectComponent,
+    UploadComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import {NgSelectModule} from '@ng-select/ng-select';
     DropdownModule,
     FormsModule,
     CalendarModule,
-    NgSelectModule
+    NgSelectModule,
+    FileUploadModule
   ],
   exports: [
     InputBuscaComponent,
@@ -38,7 +41,8 @@ import {NgSelectModule} from '@ng-select/ng-select';
     InputMaskComponent,
     InputCalendarComponent,
     SelectComponent,
-    RodapeComponent
+    RodapeComponent,
+    UploadComponent
   ]
 })
 export class InfraModule {

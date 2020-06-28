@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Evento} from '../../../../dominio/Evento';
+import {EventoService} from '../../../../services/evento/evento.service';
 
 @Component({
   selector: 'app-criar-evento',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarEventoComponent implements OnInit {
 
-  constructor() { }
+  evento: Evento;
+  categorias: string[];
+
+  constructor(private eventoService: EventoService) { }
 
   ngOnInit(): void {
+    this.evento = this.eventoService.criaEventoVazio();
+    this.categorias = this.eventoService.getCategorias();
   }
 
 }

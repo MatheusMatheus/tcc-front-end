@@ -17,58 +17,24 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'File',
-        icon: 'pi pi-fw pi-file',
-        items: [{
-          label: 'New',
-          icon: 'pi pi-fw pi-plus',
-          items: [
-            {label: 'Project'},
-            {label: 'Other'},
-          ]
-        },
-          {label: 'Open'},
-          {separator:true},
-          {label: 'Quit'}
-        ]
+        label: 'Estatísticas',
+        icon: 'pi pi-chart-line',
+        routerLink: 'home'
       },
       {
         label: 'Eventos',
-        icon: 'pi pi-fw pi-pencil',
+        icon: 'pi pi-star-o',
         items: [
           {label: 'Gerenciar', icon: 'pi pi-fw pi-trash', routerLink: 'gerenciar-evento/crud'},
-          {label: 'Grade', icon: 'pi pi-fw pi-refresh'},
-          {label: 'Detalhe', icon: 'pi pi-fw pi-refresh'}
+          {label: 'Grade', icon: 'pi pi-list'},
+          {label: 'Detalhe', icon: 'pi pi-search'}
         ]
       },
-      {
-        label: 'Help',
-        icon: 'pi pi-fw pi-question',
-        items: [
-          {
-            label: 'Contents'
-          },
-          {
-            label: 'Search',
-            icon: 'pi pi-fw pi-search',
-            items: [
-              {
-                label: 'Text',
-                items: [
-                  {
-                    label: 'Workspace'
-                  }
-                ]
-              },
-              {
-                label: 'File'
-              }
-            ]}
-        ]
+      {label: 'Novo Evento', icon: 'pi pi-plus', routerLink: 'gerenciar-evento/crud/criar'
       },
       {
-        label: 'Actions',
-        icon: 'pi pi-fw pi-cog',
+        label: 'Conta',
+        icon: 'pi pi-user',
         items: [
           {
             label: 'Edit',
@@ -86,10 +52,6 @@ export class DashboardComponent implements OnInit {
             ]
           }
         ]
-      },
-      {separator: true},
-      {
-        label: 'Quit', icon: 'pi pi-fw pi-times'
       }
     ];
   }

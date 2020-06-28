@@ -19,12 +19,37 @@ export class EventoService {
 
   criaEvento(): Evento {
     return {
-      nome: 'Guns and Roses',
+      nome: 'Abestado',
       local: 'Mane Garrincha',
       data: new Date().toLocaleDateString(),
       hora: '20:00',
       valor: 350,
+      menorDesacompanhado: false,
       categoria: CategoriaEvento.show
     };
+  }
+
+  criaEventoVazio(): Evento {
+    return {
+      nome: '',
+      local: '',
+      data: new Date().toLocaleDateString(),
+      hora: '',
+      valor: 0,
+      menorDesacompanhado: false,
+      categoria: CategoriaEvento.show
+    };
+  }
+
+  // TODO: Buscar categorias de eventos em algum serviço a ser criado
+  // TODO: Criar serviço de busca de categorias de eventos
+  getCategorias() {
+    const categorias: string[] = [];
+    for (const value in CategoriaEvento) {
+      if (typeof CategoriaEvento[value] === 'number') {
+        categorias.push(value);
+      }
+    }
+    return categorias;
   }
 }

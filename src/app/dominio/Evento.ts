@@ -7,5 +7,6 @@ export interface Evento {
     data: string;
     hora: string;
     valor: number;
+    menorDesacompanhado: boolean;
     categoria: CategoriaEvento;
 }

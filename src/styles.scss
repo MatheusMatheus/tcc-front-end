@@ -56,14 +56,15 @@ h1, p, a {
   padding: 1em 0;
 }
 
+.dashboard-container {
+  padding: 4.5em 1em 1em 1em;
+  background-color: #E4ECF5;
+}
+
 .largura-total {
   width: 100%;
   margin-bottom: 20px;
   padding: 1em;
-}
-
-.p-col {
-  margin-bottom: 20px !important;
 }
 
 @media all and (min-width: 500px)  {

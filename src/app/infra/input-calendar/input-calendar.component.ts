@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {InputComponent} from '../input/input.component';
 
 @Component({
@@ -10,8 +10,21 @@ export class InputCalendarComponent extends InputComponent {
 
   data: Date;
 
+  @Input()
+  somenteHorario ? = false;
+
+  @Input()
+  horaEdata ? = false;
+
   constructor() {
     super();
+    this.getTipo();
+  }
+
+  getTipo() {
+    if ((this.somenteHorario === true) && (this.horaEdata === true)) {
+      this.horaEdata = false;
+    }
   }
 
 }

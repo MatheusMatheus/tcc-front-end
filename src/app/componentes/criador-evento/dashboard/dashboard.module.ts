@@ -5,17 +5,33 @@ import {CommonModule} from '@angular/common';
 import {SidebarModule} from 'primeng/sidebar';
 import {MenubarModule} from 'primeng/menubar';
 import {ButtonModule, CardModule, ChartModule, InputTextModule, ProgressBarModule} from 'primeng';
+import {CrudEventoModule} from '../crud-evento/crud-evento.module';
+import {FullCalendarModule} from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
 import {DashboardComponent} from './dashboard.component';
 import {DashboardHomeComponent} from './dashboard-home/dashboard-home.component';
 import {CardAnalyticsComponent} from './card-analytics/card-analytics.component';
-import {CrudEventoModule} from '../crud-evento/crud-evento.module';
+import {CalendarioEventosComponent} from './calendario-eventos/calendario-eventos.component';
 import {TotalizacaoComponent} from './totalizacao/totalizacao.component';
-import {FullCalendarModule} from 'primeng/fullcalendar';
-import { CalendarioEventosComponent } from './calendario-eventos/calendario-eventos.component';
+import { DescricaoEventoComponent } from './descricao-evento/descricao-evento.component';
 
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  timeGridPlugin,
+  interactionPlugin
+]);
 
 @NgModule({
-  declarations: [DashboardComponent, DashboardHomeComponent, CardAnalyticsComponent, TotalizacaoComponent, CalendarioEventosComponent],
+  declarations: [
+    DashboardComponent,
+    DashboardHomeComponent,
+    CardAnalyticsComponent,
+    TotalizacaoComponent,
+    CalendarioEventosComponent,
+    DescricaoEventoComponent
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -31,4 +47,5 @@ import { CalendarioEventosComponent } from './calendario-eventos/calendario-even
   ],
   exports: [RouterModule]
 })
-export class DashboardModule { }
+export class DashboardModule {
+}

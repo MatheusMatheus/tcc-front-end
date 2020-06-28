@@ -17,5 +17,6 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.evento.nome = 'Guns and Roses';
   }
 }

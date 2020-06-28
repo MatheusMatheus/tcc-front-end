@@ -1,1 +1,85 @@
-<p>criar-evento works!</p>
+<form class="p-grid">
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <h1>Criar Evento</h1>
+    <hr>
+  </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <h2>Informações gerais</h2>
+  </div>
+
+    <div class="p-col-12 p-md-6 p-lg-6">
+      <app-input-texto id="tituloEvento"
+                       [label]="'Título'"
+                       [placeholder]="'Título do Evento'"
+                       [tipo]="'text'"
+                       required="true"
+                       [(ngModel)]="evento.nome" name="tituloEvento">
+      </app-input-texto>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-lg-6">
+      <app-input-texto id="oraganizador"
+                       [label]="'Organizador'"
+                       [placeholder]="'Nome do organizador'"
+                       [tipo]="'text'"
+                       required="true"
+                       [(ngModel)]="evento.nome" name="tituloEvento">
+      </app-input-texto>
+    </div>
+
+    <div class="p-col-12 p-md-12 p-lg-12">
+      <div class="p-grid p-align-center">
+        <div class="p-col-12 p-md-8 p-lg-8">
+          <app-select [label]="'Tipo'" [placeholder]="'Tipo do evento'" [itens]="categorias"></app-select>
+        </div>
+
+        <div class="p-col-12 p-md-4 p-lg-4">
+          <p-radioButton name="menor"
+                         value="false"
+                         label="Permite menor desacompanhado"
+                         [(ngModel)]="evento.menorDesacompanhado"
+                         inputId="menor">
+          </p-radioButton>
+        </div>
+      </div>
+    </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <hr>
+    <h2>Data e hora</h2>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-input-calendar id="dataEvento"
+                       [label]="'Data'"
+                       [placeholder]="'Data do Evento'"
+                       required="true"
+                       [(ngModel)]="evento.data" name="dataEvento">
+    </app-input-calendar>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-input-calendar id="horaEvento"
+                        [label]="'Horário'"
+                        [placeholder]="'O evento começa às'"
+                        required="true"
+                        [somenteHorario]="true"
+                        [(ngModel)]="evento.hora" name="horaEvento">
+    </app-input-calendar>
+  </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <hr>
+    <h2>Imagens</h2>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-upload [label]="'Imagem Principal do Evento'"></app-upload>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-upload [label]="'Imagem Secundária do Evento'"></app-upload>
+  </div>
+</form>
+
