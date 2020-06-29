@@ -42,6 +42,22 @@
     </div>
   </div>
 
+  <div class="p-grid p-justify-center vertical-container">
+    <div class="p-col-12 p-md-4 p-lg-4 p-col-align-stretch	">
+      <app-card-analytics [header]="'Compras por país'"
+                          [valorEstatistica]="10"
+                          [tipoGrafico]="graficoBarra"
+                          [periodo]="'dia'">
+      </app-card-analytics>
+    </div>
+
+    <div class="p-col-12 p-md-8 p-lg-8 p-col-align-stretch	">
+      <p-card>
+        <img alt="" src="assets/grafico-mapa.png" style="width: 100%">
+      </p-card>
+    </div>
+  </div>
+
   <div class="p-grid p-align-stretch">
    <div class="p-col-12 p-md-4 p-lg-4">
      <app-descricao-evento [cabecalho]="'Compras Recentes'"></app-descricao-evento>

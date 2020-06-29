@@ -25,16 +25,17 @@ export class CrudEventoComponent implements OnInit {
       label: 'Eventos',
       items: [
         {label: 'Criar Evento', icon: 'pi pi-fw pi-plus', routerLink: 'criar-evento'},
-        {label: 'Criar Ingresso', icon: 'pi pi-ticket', routerLink: 'criar-ingresso'},
-        {label: 'Lista de Convidados', icon: 'pi pi-users'},
-        {label: 'Calendário de Eventos', icon: 'pi pi-calendar', routerLink: 'calendario'}
+        {label: 'Todos os eventos', icon: 'pi pi-fw pi-star-o', routerLink: 'listar-evento'},
+        {label: 'Calendário de Eventos', icon: 'pi pi-fw pi-calendar', routerLink: 'calendario'},
+        {separator: true},
+        {label: 'Criar Ingresso', icon: 'pi pi-ticket', routerLink: 'criar-ingresso'}
+        // {label: 'Lista de Convidados', icon: 'pi pi-users'}
       ]
     },
       {
         label: 'Perfil',
         items: [
-          {label: 'Add User', icon: 'pi pi-fw pi-user-plus'},
-          {label: 'Remove User', icon: 'pi pi-fw pi-user-minus'}
+          {label: 'Ver perfil', icon: 'pi pi-fw pi-user'}
         ]
       }];
   }

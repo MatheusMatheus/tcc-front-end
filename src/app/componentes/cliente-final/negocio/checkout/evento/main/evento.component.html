@@ -22,15 +22,20 @@
       </li>
     </ul>
 
-    <div class="ingresso">
-      <app-escolha-ingresso></app-escolha-ingresso>
+    <div class="ingresso" >
+      <h1>Escolha seu ingresso</h1>
+      <div *ngFor="let i of [1, 2, 3, 4, 5]" style="margin: 1em">
+        <app-escolha-ingresso></app-escolha-ingresso>
+      </div>
     </div>
 
     <ng-template [ngIf]="isMobile" [ngIfElse]="desktop">
       <div class="assento">
         <p-accordion>
           <p-accordionTab header="Ver mapa do ambiente">
-            <div style="width: 40px; height: 40px; background: #1c1f1f"></div>
+            <div style="background: #1c1f1f; height: 100%" >
+              <img src="/assets/mapa-ambiente.png">
+            </div>
           </p-accordionTab>
 
         </p-accordion>
@@ -39,11 +44,18 @@
 
     <ng-template #desktop>
       <div class="assento">
-
+        <h1>Escolha onde vai sentar</h1>
+        <p-card>
+          <img src="/assets/mapa-ambiente.png" style="width: 100%; height: 360px">
+        </p-card>
       </div>
     </ng-template>
 
-    <div class="local-evento"></div>
+    <div class="local-evento">
+     <p-card>
+       <img src="/assets/mapa.png" style="width: 100%; height: 100%"/>
+     </p-card>
+    </div>
   </div>
 
 

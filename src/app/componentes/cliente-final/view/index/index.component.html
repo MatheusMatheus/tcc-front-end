@@ -1,5 +1,13 @@
-    <app-banner [evento]="evento"></app-banner>
+    <app-banner [evento]="evento" [mostrarBusca]="true"></app-banner>
 
-    <categorias-evento ></categorias-evento>
-    <app-card-evento></app-card-evento>
+    <ul class = "container-categoria">
+      <li *ngFor="let cat of categorias">
+        {{cat}}
+      </li>
+    </ul>
+
+    <hr>
+
+<!--    <app-filtro-evento></app-filtro-evento>-->
+    <app-card-evento *ngFor="let i of [1, 2, 3]"></app-card-evento>
 

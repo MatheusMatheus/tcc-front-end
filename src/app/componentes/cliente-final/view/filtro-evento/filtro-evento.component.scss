@@ -1,0 +1,10 @@
+.selects {
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  display: flex;
+
+  .select {
+    margin-right: 1em;
+  }
+}

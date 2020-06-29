@@ -1,7 +1,5 @@
 :host::ng-deep .navigation li {
-
     color: white;
-
 }
 
 .banner{
@@ -12,12 +10,14 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 500px;
+  overflow: hidden;
 
   .imagem-evento {
     filter: brightness(65%);
     height: 100%;
-    width: 100%;
+    width: auto;
+    overflow: hidden;
   }
 
 
@@ -29,14 +29,19 @@
     text-align: center;
     width: 100%;
 
-    h1 {
-      margin: 0;
+    h1, p, a {
+      margin: .3em;
       text-align: center;
     }
 
-    p {
-      margin: 0;
-      text-align: center;
+    a:not(:first-child) {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    a:not(:first-child):hover {
+      text-decoration: none;
     }
 
    .input {
@@ -47,8 +52,13 @@
 
 @media all and (min-width: 600px) {
   .banner {
+    height: 400px;
+    .imagem-evento {
+      width: 100%;
+    }
+
     .infos-evento {
-      bottom: 15%;
+      bottom: 32%;
       transform: translate(-50%, -5%);
       .input {
         display: block;

@@ -3,7 +3,8 @@ import { CategoriaEvento } from './enums/CategoriaEvento';
 export interface Evento {
     id: string;
     nome: string;
-    local: string;
+    artista ?: string;
+    localizacao: Localizacao;
     data: string;
     hora: string;
     organizador: string;
@@ -12,14 +13,27 @@ export interface Evento {
     qtdMinima ?: number;
     qtdMaxima ?: number;
     ingressos: Ingresso[];
+    imagemPrincipal ?: string;
+    imagemSecundaria ?: string;
 }
 
 export class Ingresso {
   id: string;
-  descricao ?: string;
-  preco: number;
-  tipo: string;
+  tipos: TipoIngresso[];
   meiaEntrada = false;
 }
 
+export class TipoIngresso {
+  preco: number;
+  descricao ?: string;
+  quantidade: number;
+}
 
+export class Localizacao {
+  latitude ?: string;
+  longitude ?: string;
+  imagemCidade ?: string;
+  pais: string;
+  cidade: string;
+  local: string;
+}

@@ -1,6 +1,7 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Evento} from '../../../../../dominio/Evento';
+import {Evento, Ingresso, TipoIngresso} from '../../../../../dominio/Evento';
 import {Subject} from 'rxjs';
+import {EventoService} from '../../../../../services/evento/evento.service';
 
 @Component({
   selector: 'app-tipo-preco',
@@ -15,18 +16,32 @@ export class TipoPrecoComponent implements OnInit, OnDestroy {
   @Input()
   evento: Evento;
 
-  tipoIngresso: string;
+  ingresso: Ingresso;
 
-  constructor() { }
+  tipoIngresso: TipoIngresso;
+
+  tiposIngresso: TipoIngresso[] = [];
+
+  constructor(private eventoService: EventoService) {
+    this.ingresso = this.eventoService.criarIngressoVazio();
+  }
 
   ngOnInit(): void {
-    this.tipoIngressoSubject.subscribe(event => {
-      this.tipoIngresso = event;
+    this.tipoIngressoSubject.subscribe(novoTipo => {
+      this.tipoIngresso = {preco: 0, quantidade: 0, descricao: novoTipo};
+      if (!this.ingresso.tipos.includes(this.tipoIngresso)) {
+        this.ingresso.tipos.push(this.tipoIngresso);
+        console.table(this.tipoIngresso);
+      }
+
+      if (!this.evento.ingressos.includes(this.ingresso)) {
+        this.evento.ingressos.push(this.ingresso);
+      }
     });
+
   }
 
   ngOnDestroy() {
     this.tipoIngressoSubject.unsubscribe();
   }
-
 }

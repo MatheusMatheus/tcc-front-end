@@ -16,15 +16,23 @@
   .ingresso, .assento, .local-evento {
     width: 100%;
     margin: 0 .5em 3em .5em;
-    border: 2px solid #999999;
+
+    h1 {
+      color: black;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
 
   .local-evento {
     height: 200px;
   }
 
-  .ingresso {
-    margin-top: 0;
+  .ingresso > h1 {
+    padding-left: 1em;
   }
 
   .assento {
@@ -77,6 +85,7 @@
     li:first-child:hover, li:last-child:hover  {
       background: transparent;
       cursor: auto;
+      color: black;
     }
   }
 
@@ -87,6 +96,11 @@
 
     .ingresso, .assento {
       width: calc(50% - 27px);
+      margin-bottom: 0;
+    }
+
+    .local-evento {
+      margin-bottom: 0;
     }
 
     .assento {

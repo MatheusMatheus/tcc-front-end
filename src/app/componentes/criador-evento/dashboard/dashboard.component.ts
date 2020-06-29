@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MenuItem} from 'primeng';
 
 @Component({
@@ -21,18 +21,10 @@ export class DashboardComponent implements OnInit {
         icon: 'pi pi-chart-line',
         routerLink: 'home'
       },
-      {
-        label: 'Eventos',
-        icon: 'pi pi-star-o',
-        items: [
-          {label: 'Gerenciar', icon: 'pi pi-fw pi-trash', routerLink: 'gerenciar-evento/crud'},
-          {label: 'Grade', icon: 'pi pi-list'},
-          {label: 'Detalhe', icon: 'pi pi-search'}
-        ]
-      },
+      {label: 'Gerenciar', icon: 'pi pi-cog', routerLink: 'gerenciar-evento/crud'},
       {label: 'Novo Evento', icon: 'pi pi-plus', routerLink: 'gerenciar-evento/crud/criar-evento'
       },
-      {
+/*      {
         label: 'Conta',
         icon: 'pi pi-user',
         items: [
@@ -52,7 +44,7 @@ export class DashboardComponent implements OnInit {
             ]
           }
         ]
-      }
+      }*/
     ];
   }
 

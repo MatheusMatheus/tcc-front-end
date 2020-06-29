@@ -1,31 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Evento} from '../../../../dominio/Evento';
 import {EventoService} from '../../../../services/evento/evento.service';
+import {DialogService, DynamicDialogRef} from 'primeng';
+import {EventoComponent} from '../../../cliente-final/negocio/checkout/evento/main/evento.component';
 
 @Component({
   selector: 'app-criar-evento',
   templateUrl: './criar-evento.component.html',
-  styleUrls: ['./criar-evento.component.scss']
+  styleUrls: ['./criar-evento.component.scss'],
+  providers: [DialogService]
 })
-export class CriarEventoComponent implements OnInit {
+export class CriarEventoComponent implements OnInit, OnDestroy {
 
   evento: Evento;
 
   categorias: string[];
 
-  options: any;
+  ref: DynamicDialogRef;
 
-  overlays: any[];
 
-  constructor(private eventoService: EventoService) { }
+  constructor(private eventoService: EventoService,
+              public dialogService: DialogService) { }
 
   ngOnInit(): void {
     this.evento = this.eventoService.criaEventoVazio();
     this.categorias = this.eventoService.getCategorias();
-    this.options = {
-      center: {lat: 36.890257, lng: 30.707417},
-      zoom: 12
-    };
+  }
+
+  ngOnDestroy() {
+    if (this.ref) {
+      this.ref.close();
+    }
+  }
+
+  mostrarPreview() {
+    this.ref = this.dialogService.open(EventoComponent, {
+      data: this.evento,
+      header: 'Preview da página do evento',
+      width: '80%',
+      style: {'margin-top': '4em'},
+      contentStyle: {'max-height': '800px', overflow: 'auto'}
+    });
+
+    this.ref.onClose.subscribe(() => {
+      console.log('Fechou');
+    });
   }
 
 }

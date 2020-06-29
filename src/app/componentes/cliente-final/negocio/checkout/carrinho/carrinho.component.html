@@ -25,7 +25,9 @@
          <div>
            <p>Local do assento</p>
            <p><strong>Data: </strong>{{evento.data}}</p>
-           <p><strong>Local: </strong>{{evento.local}}</p>
+           <p><strong>País: </strong>{{evento.localizacao.pais}}</p>
+           <p><strong>Cidade: </strong>{{evento.localizacao.cidade}}</p>
+           <p><strong>Local: </strong>{{evento.localizacao.local}}</p>
          </div>
 
           <hr>
@@ -38,7 +40,7 @@
               <a>Excluir</a>
             </div>
 
-            <div class="subtotal">R$ {{evento.valor * quantidade }}</div>
+            <div class="subtotal">R$ {{150 * quantidade }}</div>
           </div>
         </div>
 

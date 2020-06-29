@@ -11,4 +11,27 @@ h1 {
   button {
     margin-top: 1em;
   }
+
+  a {
+    padding: 1em 0;
+    color: black;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
+
+.menor {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  p {
+    color: black;
+    padding-left: 1em;
+  }
+}
+

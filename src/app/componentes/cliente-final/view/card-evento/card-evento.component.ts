@@ -3,7 +3,7 @@
 // filmes populares
 
 
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Evento} from 'src/app/dominio/Evento';
 import {EventoService} from '../../../../services/evento/evento.service';
 
@@ -17,6 +17,9 @@ export class CardEventoComponent implements OnInit {
   eventos: Evento[] = [];
 
   responsiveOptions;
+
+  @Input()
+  mostrarInfosEvento ? = true;
 
   constructor(private eventoService: EventoService) {
     this.responsiveOptions = [

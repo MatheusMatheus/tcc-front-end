@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Evento} from '../../dominio/Evento';
+import {Evento, Ingresso} from '../../dominio/Evento';
 import {CategoriaEvento} from '../../dominio/enums/CategoriaEvento';
 
 @Injectable({
@@ -19,17 +19,20 @@ export class EventoService {
 
   criaEvento(): Evento {
     return {
+      localizacao: {pais: 'Brasil', cidade: 'Brasília', local: 'Mané Garrincha'},
       id: 'X45A54E',
       ingressos: [{
         id: 'F131H351',
-        preco: 350,
-        tipo: String(CategoriaEvento.show),
+        tipos: [{
+          preco: 350,
+          descricao: 'VIP',
+          quantidade: 1000
+        }],
         meiaEntrada: false
       }],
       qtdMaxima: 0,
       qtdMinima: 0,
       nome: 'Abestado',
-      local: 'Mane Garrincha',
       data: new Date().toLocaleDateString(),
       hora: '20:00',
       menorDesacompanhado: false,
@@ -40,12 +43,12 @@ export class EventoService {
 
   criaEventoVazio(): Evento {
     return {
+      localizacao: {pais: '', cidade: '', local: ''},
       id: '',
       ingressos: [],
       qtdMaxima: 0,
       qtdMinima: 0,
       nome: '',
-      local: '',
       data: new Date().toLocaleDateString(),
       hora: '',
       menorDesacompanhado: false,
@@ -54,11 +57,10 @@ export class EventoService {
     };
   }
 
-  criarIngressoVazio() {
+  criarIngressoVazio(): Ingresso {
     return {
       id: '',
-      preco: 0,
-      tipo: '',
+      tipos: [],
       meiaEntrada: false
     };
   }

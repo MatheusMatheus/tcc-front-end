@@ -24,7 +24,7 @@
                        [placeholder]="'Nome do organizador'"
                        [tipo]="'text'"
                        required="true"
-                       [(ngModel)]="evento.nome" name="tituloEvento">
+                       [(ngModel)]="evento.organizador" name="oraganizador">
       </app-input-texto>
     </div>
 
@@ -33,6 +33,7 @@
                      [label]="'Quantidade mínima'"
                      [placeholder]="'Quantidade mínima'"
                      [tipo]="'number'"
+                     [(ngModel)]="evento.qtdMinima" name="qtdMinima"
                      required="true">
     </app-input-texto>
   </div>
@@ -43,13 +44,13 @@
                      [placeholder]="'Quantidade máxima'"
                      [tipo]="'number'"
                      required="true"
-                     [(ngModel)]="evento.nome" name="tituloEvento">
+                     [(ngModel)]="evento.qtdMaxima" name="qtdMaxima">
     </app-input-texto>
   </div>
 
     <div class="p-col-12 p-md-12 p-lg-12">
       <div class="p-grid p-align-center">
-        <div class="p-col-12 p-md-8 p-lg-8">
+        <div class="p-col-12 p-md-6 p-lg-6">
           <app-select [label]="'Tipo'"
                       [placeholder]="'Tipo do evento'"
                       [itens]="categorias"
@@ -57,13 +58,18 @@
           </app-select>
         </div>
 
-        <div class="p-col-12 p-md-4 p-lg-4">
-          <p-radioButton name="menor"
-                         value="false"
-                         label="Permite menor desacompanhado"
-                         [(ngModel)]="evento.menorDesacompanhado"
-                         inputId="menor">
-          </p-radioButton>
+        <div class="p-col-12 p-md-6 p-lg-6">
+          <br>
+          <div class="menor">
+            <p-toggleButton [(ngModel)]="evento.menorDesacompanhado"
+                           name="menor"
+                           onLabel="Sim"
+                           offLabel="Não"
+                           required="true">
+            </p-toggleButton>
+
+            <p style="color: black">Permite menor desacompanhado?</p>
+          </div>
         </div>
       </div>
     </div>
@@ -75,8 +81,21 @@
   </div>
 
   <div class="p-col-12 p-md-12 p-lg-12">
-    <img src="/assets/mapa.png" style="width: 100%" />
+    <img src="/assets/mapa.png" alt="" style="width: 100%" />
   </div>
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <hr>
+    <h2>Mapa do Ambiente</h2>
+    <p style="color: #1c1f1f">Usuário vai poder montar mapa do ambiente do evento</p>
+    <img src="assets/mapa-ambiente.png" alt="" style="margin: 0 auto; display: flex">
+  </div>
+
+
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <app-mapa-ambiente></app-mapa-ambiente>
+  </div>
+
 
   <div class="p-col-12 p-md-12 p-lg-12">
     <hr>
@@ -118,12 +137,13 @@
   <div class="p-col-12 p-md-12 p-lg-12">
     <hr>
     <div class="criar-evento">
+      <a (click)="mostrarPreview()">Preview da página do evento</a>
       <p-radioButton name="termos"
                      value="false"
                      label="Concordo com os termos de uso"
                      inputId="termos">
       </p-radioButton>
-      <button label="Criar evento" pButton class="ui-button-primary"></button>
+      <button label="Criar evento" pButton class="ui-button-primary largura-total"></button>
     </div>
 
   </div>

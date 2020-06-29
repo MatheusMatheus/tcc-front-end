@@ -6,13 +6,13 @@ import {CriarEventoComponent} from './criar-evento/criar-evento.component';
 import {CalendarioEventosComponent} from '../dashboard/calendario-eventos/calendario-eventos.component';
 import {CriarIngressoComponent} from './criar-ingresso/criar-ingresso.component';
 
-
 const rotas: Routes = [
   {
     path: 'crud', component: CrudEventoComponent,
     children: [
       {path: '', component: ListagemEventoComponent},
       {path: 'criar-evento', component: CriarEventoComponent},
+      {path: 'listar-evento', component: ListagemEventoComponent},
       {path: 'criar-ingresso', component: CriarIngressoComponent},
       {path: 'calendario', component: CalendarioEventosComponent}
     ],

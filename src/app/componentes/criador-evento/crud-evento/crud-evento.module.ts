@@ -5,14 +5,18 @@ import {TableModule} from 'primeng/table';
 import {CriarEventoComponent} from './criar-evento/criar-evento.component';
 import {CrudEventoComponent} from './crud-evento.component';
 import {CardModule} from 'primeng/card';
-import {ButtonModule, MenuModule, RadioButtonModule} from 'primeng';
+import {ButtonModule, ToggleButtonModule, MenuModule, RadioButtonModule, SplitButtonModule} from 'primeng';
 import {CrudEventoRoutingModule} from './crud-evento-routing.module';
 import {InfraModule} from '../../../infra/infra.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {CriarIngressoComponent} from './criar-ingresso/criar-ingresso.component';
 import {AccordionModule} from 'primeng/accordion';
-import { TipoPrecoComponent } from './criar-ingresso/tipo-preco/tipo-preco.component';
+import {TipoPrecoComponent} from './criar-ingresso/tipo-preco/tipo-preco.component';
+import {MapaAmbienteComponent} from './criar-evento/mapa-ambiente/mapa-ambiente.component';
+import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import {EventoComponent} from '../../cliente-final/negocio/checkout/evento/main/evento.component';
+import {CardEventoComponent} from '../../cliente-final/view/card-evento/card-evento.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +25,7 @@ import { TipoPrecoComponent } from './criar-ingresso/tipo-preco/tipo-preco.compo
       CrudEventoComponent,
       CriarIngressoComponent,
       TipoPrecoComponent,
+      MapaAmbienteComponent
     ],
     exports: [
         ListagemEventoComponent
@@ -36,7 +41,13 @@ import { TipoPrecoComponent } from './criar-ingresso/tipo-preco/tipo-preco.compo
     InfraModule,
     RadioButtonModule,
     HttpClientModule,
-    AccordionModule
+    AccordionModule,
+    SplitButtonModule,
+    ToggleButtonModule,
+    DynamicDialogModule
+  ],
+  entryComponents: [
+    EventoComponent, CardEventoComponent
   ]
 })
 export class CrudEventoModule { }

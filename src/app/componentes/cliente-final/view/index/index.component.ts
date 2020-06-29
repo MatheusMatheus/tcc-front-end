@@ -8,12 +8,16 @@ import {EventoService} from '../../../../services/evento/evento.service';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-  constructor(private eventoService: EventoService) { }
+
+  categorias: string[] = [];
 
   evento: Evento;
 
+  constructor(private eventoService: EventoService) { }
+
   ngOnInit(): void {
     this.evento = this.eventoService.criaEvento();
+    this.categorias = this.eventoService.getCategorias();
   }
 
 }

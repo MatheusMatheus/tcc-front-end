@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { CategoriaEvento } from 'src/app/dominio/enums/CategoriaEvento';
+import {Component, OnInit} from '@angular/core';
 import {EventoService} from '../../../../services/evento/evento.service';
 
 @Component({
-  selector: 'categorias-evento',
+  selector: 'app-categorias-evento',
   templateUrl: './categorias-evento.component.html',
   styleUrls: ['./categorias-evento.component.scss']
 })

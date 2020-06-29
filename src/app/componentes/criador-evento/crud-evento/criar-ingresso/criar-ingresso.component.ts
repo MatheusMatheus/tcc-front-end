@@ -14,6 +14,8 @@ export class CriarIngressoComponent implements OnInit {
 
   eventos: Evento[];
 
+  nomesEvento: string[];
+
   tipoIngresso: string;
 
   ingressoSubject: Subject<string> = new Subject<string>();
@@ -23,10 +25,12 @@ export class CriarIngressoComponent implements OnInit {
   ngOnInit(): void {
     this.evento = this.eventoService.criaEventoVazio();
     this.eventos = this.eventoService.criaEventos();
+    this.nomesEvento = this.eventos.map(evento => evento.nome);
   }
 
   notificarFilho() {
     this.ingressoSubject.next(this.tipoIngresso);
+    this.tipoIngresso = '';
   }
 
 }

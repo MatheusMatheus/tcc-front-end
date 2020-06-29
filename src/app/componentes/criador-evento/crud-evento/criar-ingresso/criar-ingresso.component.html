@@ -7,38 +7,50 @@
   <div class="p-col-12 p-md-12 p-lg-12">
     <app-select [label]="'Evento'"
                 [placeholder]="'Selecione um evento'"
-                [itens]="eventos"
-                [(ngModel)]="evento">
+                [itens]="nomesEvento"
+                [(ngModel)]="evento" name="evento">
     </app-select>
   </div>
 
-  <div class="p-col-12 p-md-12 p-lg-12">
+  <div class="p-col-12 p-md-4 p-lg-4">
     <div class="p-grid">
-      <div class="p-col-12 p-md-10 p-lg-10">
-        <app-input-texto id="addTipo"
-                         [label]="'Tipo de Ingresso'"
-                         [placeholder]="'Adicionar tipo de ingresso'"
-                         [tipo]="'text'"
-                         [(ngModel)]="tipoIngresso" name="addTipo"
-                         required="true">
-        </app-input-texto>
-      </div>
+      <div class="p-col-12 p-md-12 p-lg-12">
+        <p-card>
+          <h2>Arquibancada</h2>
+          <app-input-texto id="preco"
+                           [label]="'Preço'"
+                           [placeholder]="'Preço ingresso'"
+                           [tipo]="'number'"
+                           required="true">
+          </app-input-texto>
 
-      <div class="p-col-12 p-md-2 p-lg-2">
-        <br>
-        <button pButton label="Criar evento"
-                class="ui-button-primary"
-                (click)="notificarFilho()"></button>
+          <app-input-texto id="quantidade"
+                           [label]="'Quantidade'"
+                           [placeholder]="'Quantidade'"
+                           [tipo]="'number'"
+                           required="true">
+          </app-input-texto>
+
+          <p-toggleButton onLabel="Sim"
+                          offLabel="Não">
+          </p-toggleButton>
+          <p style="color: black; display: inline; padding-left: .5em">Permite meia entrada?</p>
+        </p-card>
       </div>
     </div>
   </div>
 
-  <div class="p-col-12 p-md-812 p-lg-12">
-    <app-tipo-preco [evento]="evento" [tipoIngressoSubject]="ingressoSubject">
-
-    </app-tipo-preco>
+  <div class="p-col-12 p-md-8 p-lg-8">
+    <p-card>
+      <img src="assets/mapa-ambiente.png" style="margin: 0 auto; display: flex">
+    </p-card>
   </div>
 
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <hr>
+      <button label="Criar ingressos" pButton class="ui-button-primary largura-total"></button>
+
+  </div>
 
 </form>
 

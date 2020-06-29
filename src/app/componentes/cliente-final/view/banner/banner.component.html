@@ -1,13 +1,16 @@
-<div class = "banner" >
+<div class = "banner">
 
     <img src="/assets/guns.jpg" class="imagem-evento">
     <div class = "infos-evento" >
 
-       <a href=""> <h1 >{{ evento.nome }}</h1> </a>
-        <p><strong>{{ evento.local }}</strong></p>
-        <p><strong>Ingressos a partir de {{ evento.ingressos[0].preco}}</strong></p>
+        <a routerLink="/checkout/evento"> <h1 >{{ evento.nome }}</h1> </a>
+        <a><strong>{{ evento.localizacao.local }},</strong></a>
+        <a><strong>{{ evento.localizacao.pais }},</strong></a>
+        <a><strong>{{ evento.localizacao.cidade }}</strong></a>
+        <a style="display: block"><strong>{{ evento.nome }}</strong></a>
+        <p><strong>Ingressos a partir de {{ evento.ingressos[0].tipos[0].preco}}</strong></p>
 
-       <div class="input" [ngStyle]="{'display': mostrarBusca ? 'block' : 'none' }">
+       <div class="input" [ngStyle]="{'display': mostrarBusca && !isMobile ? 'block' : 'none' }">
         <app-input-busca></app-input-busca>
        </div>
 

@@ -8,6 +8,7 @@ import {CategoriasEventoComponent} from './categorias-evento/categorias-evento.c
 import {AutoCompleteModule, ButtonModule, CarouselModule, InputTextModule} from 'primeng';
 import {InfraModule} from '../../../infra/infra.module';
 import {FlexModule} from '@angular/flex-layout';
+import { FiltroEventoComponent } from './filtro-evento/filtro-evento.component';
 
 const rotas: Routes = [
   {path: '', component: IndexComponent},
@@ -18,7 +19,8 @@ const rotas: Routes = [
     BannerComponent,
     CardEventoComponent,
     IndexComponent,
-    CategoriasEventoComponent
+    CategoriasEventoComponent,
+    FiltroEventoComponent
   ],
   imports: [
     CarouselModule,
