@@ -1,5 +1,5 @@
-import {Component, OnInit, Input, HostListener} from '@angular/core';
-import { Evento } from 'src/app/dominio/Evento';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
+import {Evento} from 'src/app/dominio/Evento';
 
 const mobile = 900;
 
@@ -15,7 +15,6 @@ export class BannerComponent implements OnInit {
 
   @Input()
   mostrarBusca ? = false;
-
 
   isMobile = true;
 

@@ -1,7 +1,9 @@
-<label *ngIf="label">{{label}}</label>
-  <input placeholder="{{placeholder}}"
-         [(ngModel)]="val"
+<span class="ui-float-label">
+  <input [(ngModel)]="val"
          (ngModelChange)="onChange($event)"
          [type]="tipo"
          name="value"
-         pInputText/>
+         id="float-input"
+  pInputText/>
+  <label for="float-input" *ngIf="label">{{label}}</label>
+</span>

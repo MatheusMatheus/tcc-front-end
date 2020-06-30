@@ -17,19 +17,19 @@ export interface Evento {
     imagemSecundaria ?: string;
 }
 
-export class Ingresso {
+export interface Ingresso {
   id: string;
   tipos: TipoIngresso[];
-  meiaEntrada = false;
+  meiaEntrada ?: false;
 }
 
-export class TipoIngresso {
+export interface TipoIngresso {
   preco: number;
   descricao ?: string;
   quantidade: number;
 }
 
-export class Localizacao {
+export interface Localizacao {
   latitude ?: string;
   longitude ?: string;
   imagemCidade ?: string;

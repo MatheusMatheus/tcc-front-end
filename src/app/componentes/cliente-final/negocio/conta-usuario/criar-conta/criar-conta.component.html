@@ -4,7 +4,6 @@
     <form style="width: 100%">
       <div class="p-col">
         <app-input-texto id="nome"
-                         [placeholder]="'Nome Completo'"
                          [label]="'Nome'"
                          required="true"
                          [(ngModel)]="cliente.nome" name="nome">
@@ -13,7 +12,6 @@
 
       <div class="p-col">
         <app-input-texto id="email"
-                         [placeholder]="'E-mail'"
                          [label]="'E-mail'"
                          required="true"
                          [(ngModel)]="cliente.email" name="email">
@@ -23,16 +21,17 @@
       <div class="p-col">
         <app-input-texto id="senha"
                          [label]="'Senha'"
-                         [placeholder]="'Senha'"
                          [tipo]="'password'"
                          required="true"
                          [(ngModel)]="cliente.login.senha" name="senha">
         </app-input-texto>
+      </div>
+
+      <div class="p-col">
         <app-input-texto id="confirmaSenha"
-                         [placeholder]="'Confirmação da senha'"
+                         [label]="'Confirmação da senha'"
                          [tipo]="'password'"
-                         required="true"
-                         [(ngModel)]="cliente.login.senha" name="senha">
+                         required="true">
         </app-input-texto>
       </div>
 

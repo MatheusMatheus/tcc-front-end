@@ -1,11 +1,20 @@
+.header {
+  width: 100%;
+  text-align: center;
+  line-height: 1.25em;
+  background: #c2c0bf;
+  position: relative;
+}
 
 .navigation{
   display: flex;
   justify-content: flex-end;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 2;
   width: 100%;
-  margin: 0 0 1.5em 0;
+  margin: 0;
   list-style: none;
   transition-duration: .5s;
 }
@@ -23,7 +32,6 @@
   text-decoration: none;
   display: flex;
   padding: .6em;
-  color: black;
   align-self: center;
 }
 
@@ -42,17 +50,8 @@
   font-size: 1.5em;
 }
 
-.menu-mobile {
-  padding: 0;
 
-  li:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-}
-
-
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
   .navigation {
     justify-content: space-between;
     padding: 0;
@@ -61,13 +60,20 @@
   .navigation li {
     text-align: center;
     padding: 10px;
-    width: 100%;
-    flex-grow: 1;
     color: white;
+    width: auto;
   }
 
   .navigation li.toggle {
     display: flex;
+
+    i{
+      padding-left: .8em;
+    }
+  }
+
+  .navigation li.logo {
+    margin-right: inherit;
   }
 
   .navigation li.item {
@@ -77,6 +83,7 @@
   .navigation li.carrinho {
     i {
       margin-left: auto;
+      padding-right: .8em;
     }
   }
 }

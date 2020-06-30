@@ -18,7 +18,7 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #faf8f7;
+  background-color: #151A30;
 
   li {
     color: white;
@@ -41,7 +41,7 @@ input {
 }
 
 h1, p, a {
-  color: white;
+  color: white !important;
   letter-spacing: .05em !important;
   text-decoration: none;
 }
@@ -69,7 +69,6 @@ h1, p, a {
 
 @media all and (min-width: 500px)  {
   .container {
-
     padding: 6em;
   }
 }

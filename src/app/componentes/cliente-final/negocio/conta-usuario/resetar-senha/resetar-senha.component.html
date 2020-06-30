@@ -1,16 +1,22 @@
 <section class="container">
   <div class="login">
-    <div class="titulo">Recuperar Senha</div>
-    <div style="text-align: center; padding: 5px;">
-      Informe seu endereço de e-mail abaixo, um link para recuperar a senha será enviado</div>
-    <form>
-      <app-input-texto id="email"
-                       required="true"
-                       [label]="'E-mail'"
-                       [(ngModel)]="cliente" name="email">
-      </app-input-texto>
+    <form class="p-grid">
+      <div class="p-col-12 p-md-12 p-lg-12">
+        <div class="titulo">Recuperar Senha</div>
+        <div style="text-align: center; padding: 5px;">
+          Informe seu endereço de e-mail abaixo, um link para recuperar a senha será enviado
+        </div>
+      </div>
 
-      <div class="p-field p-grid">
+      <div class="p-col-12 p-md-12 p-lg-12">
+        <app-input-texto id="email"
+                         required="true"
+                         [label]="'E-mail'"
+                         [(ngModel)]="cliente" name="email">
+        </app-input-texto>
+      </div>
+
+      <div class="p-col-12 p-md-12 p-lg-12">
         <button pButton label="Enviar e-mail de recuperação de senha" class="ui-button-primary largura-total"></button>
       </div>
     </form>

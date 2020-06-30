@@ -1,4 +1,7 @@
-<header>
+<header class="main-container">
+    <div class="header">
+      #BlackLivesMatter
+    </div>
     <ul class="navigation" (scroll)="onScroll($event)"
         [className]="colorido ? 'navigation colorido' : 'navigation'">
 
@@ -13,7 +16,7 @@
         </p-sidebar>
       </li>
 
-      <li class="logo" routerLink="">EVENTOS D'AHORA</li>
+      <li class="logo" routerLink=""><span>EVENTOS D'AHORA</span></li>
 
       <li class="item" routerLink="/dashboard/home">
         Criar evento

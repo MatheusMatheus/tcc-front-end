@@ -22,10 +22,11 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
-    this.colorido = window.pageYOffset > 80;
+    this.colorido = window.pageYOffset > 150;
   }
 
   ngOnInit(): void {
+    console.log(this.router.routerState.snapshot);
     this.items = [
       { label: 'Minha conta' },
       { label: 'Criar Evento' },
