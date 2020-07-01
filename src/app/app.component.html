@@ -1,7 +1,5 @@
-<header class="main-container">
-    <div class="header">
-      #BlackLivesMatter
-    </div>
+<nav>
+
     <ul class="navigation" (scroll)="onScroll($event)"
         [className]="colorido ? 'navigation colorido' : 'navigation'">
 
@@ -28,7 +26,7 @@
         <i class="pi pi-shopping-cart" style="font-size: 1.5em;"></i>
       </li>
     </ul>
-</header>
+</nav>
 
 <main>
   <router-outlet></router-outlet>

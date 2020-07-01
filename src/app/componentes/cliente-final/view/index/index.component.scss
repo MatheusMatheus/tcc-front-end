@@ -4,6 +4,8 @@
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin: 0;
+  background-color: #222B45;
 
   li {
     padding: .7em;
@@ -11,20 +13,18 @@
     text-decoration: none;
     border-radius: 7px;
   }
-
-  li:hover {
-    background: rgb(30, 44, 48);;
-    cursor: pointer;
-    color: white;
-  }
 }
 
 /* Tablet*/
 @media all and (min-width: 500px) {
   .container-categoria {
-
     justify-content: center;
     overflow: hidden;
+
+    li {
+      padding: .7em 1em;
+      margin: .5em 1em;
+    }
   }
 }
 

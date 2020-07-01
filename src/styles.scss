@@ -27,11 +27,12 @@ body {
     outline: none;
   }
 
+  li:hover {
+    background: #8A13CF;
+    cursor: pointer;
+    color: white;
+  }
 
-}
-
-.p-col-fixed {
-  color: black;
 }
 
 input {
@@ -42,8 +43,11 @@ input {
 
 h1, p, a {
   color: white !important;
-  letter-spacing: .05em !important;
   text-decoration: none;
+}
+
+hr {
+  background-color: white !important;
 }
 
 .container {
@@ -58,13 +62,21 @@ h1, p, a {
 
 .dashboard-container {
   padding: 4.5em 1em 1em 1em;
-  background-color: #E4ECF5;
+  background-color: #151A30;
 }
 
 .largura-total {
   width: 100%;
   margin-bottom: 20px;
   padding: 1em;
+}
+
+.ui-card {
+  background-color: #222B45 !important;
+  border: 1px solid black;
+  .ui-card-title {
+    color: white
+  }
 }
 
 @media all and (min-width: 500px)  {

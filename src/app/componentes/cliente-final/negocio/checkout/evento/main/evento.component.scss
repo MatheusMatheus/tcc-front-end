@@ -61,12 +61,6 @@
       }
     }
 
-    li:hover {
-      background: rgb(30, 44, 48);;
-      cursor: pointer;
-      color: white;
-    }
-
     li:first-child {
       padding-left: 0;
       font-size: 1.5em;
@@ -93,12 +87,9 @@
       margin-bottom: 0;
     }
 
-    .local-evento {
-      margin-bottom: 0;
-    }
-
     .assento {
       order: 0;
+      margin-bottom: 1em;
     }
   }
 }

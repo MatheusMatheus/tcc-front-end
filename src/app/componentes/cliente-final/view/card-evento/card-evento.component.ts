@@ -19,7 +19,7 @@ export class CardEventoComponent implements OnInit {
   responsiveOptions;
 
   @Input()
-  mostrarInfosEvento ? = false;
+  mostrarInfosEvento ? = true;
 
   constructor(private eventoService: EventoService) {
     this.responsiveOptions = [
