@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltroEventoComponent implements OnInit {
 
+  datas: Date[];
+
   constructor() { }
 
   ngOnInit(): void {

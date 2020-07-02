@@ -10,12 +10,14 @@ import {EventoComponent} from './evento/main/evento.component';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {AccordionModule, ButtonModule, CardModule, RadioButtonModule} from 'primeng';
 import {ViewModule} from '../../view/view.module';
+import {EventosCategoriaComponent} from '../../view/eventos-categoria/eventos-categoria.component';
 
 
 const rotas: Routes = [
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'evento', component: EventoComponent},
-  {path: 'finalizar-pedido', component: FinalizarPedidoComponent}
+  {path: 'finalizar-pedido', component: FinalizarPedidoComponent},
+  {path: 'listagem-eventos', component: EventosCategoriaComponent}
 ];
 
 @NgModule({

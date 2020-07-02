@@ -1,22 +1,31 @@
 <div class="banner">
 
-  <img *ngIf="evento && !evento.imagemPrincipal" src="/assets/guns.jpg" class="imagem-evento">
+  <img src="/assets/guns.jpg" class="imagem-evento">
 
-  <img *ngIf="!evento" src="/assets/evento-default.jpg" class="imagem-evento">
+ <!-- <img *ngIf="!evento.imagemPrincipal" src="/assets/evento-default.jpg" class="imagem-evento">-->
 
-  <ng-template *ngIf="evento.imagemPrincipal">
-    <div class="infos-evento">
+  <ng-template [ngIf]="evento">
+    <div  class="infos-evento">
 
       <a routerLink="/checkout/evento"><h1>{{ evento.nome }}</h1></a>
-      <a><strong>{{ evento.localizacao.local }},</strong></a>
-      <a><strong>{{ evento.localizacao.pais }},</strong></a>
-      <a><strong>{{ evento.localizacao.cidade }}</strong></a>
-      <a style="display: block"><strong>{{ evento.nome }}</strong></a>
-      <p><strong>Ingressos a partir de {{ evento.ingressos[0].tipos[0].preco}}</strong></p>
+      <p>{{ evento.data }}</p>
+      <p>{{ evento.hora }}</p>
+      <a (click)="navigateToCategoria(local, evento)">
+        {{ evento.localizacao.local }},</a>&nbsp;&nbsp;
+
+      <a (click)="navigateToCategoria(pais, evento)">
+        {{ evento.localizacao.pais }},</a>&nbsp;&nbsp;
+
+      <a (click)="navigateToCategoria(cidade, evento)">
+        {{ evento.localizacao.cidade }}</a>
+      <br>
+      <a (click)="navigateToCategoria(nome, evento)">{{ evento.nome }}</a>
+      <p style="margin-bottom: 1em">Ingressos a partir de {{ evento.ingressos[0].tipos[0].preco}}</p>
 
       <div [ngStyle]="{'display': mostrarBusca && !isMobile ? 'block' : 'none' }">
         <app-input-busca></app-input-busca>
       </div>
     </div>
   </ng-template>
+
 </div>
