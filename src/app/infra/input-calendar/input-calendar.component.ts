@@ -16,6 +16,9 @@ export class InputCalendarComponent extends InputComponent {
   @Input()
   horaEdata ? = false;
 
+  @Input()
+  inline ?: false;
+
   constructor() {
     super();
     this.getTipo();

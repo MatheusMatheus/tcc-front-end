@@ -5,7 +5,7 @@ import {InputComponent} from '../input/input.component';
 @Component({
   selector: 'app-input-texto',
   templateUrl: './input-texto.component.html',
-  styleUrls: ['./input-texto.component.scss'],
+  styleUrls: ['../input/input-texto.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

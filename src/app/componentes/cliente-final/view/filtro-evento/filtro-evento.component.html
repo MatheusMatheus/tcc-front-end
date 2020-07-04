@@ -1,15 +1,63 @@
-<div class="container">
   <div class="selects">
-<!--      <p-dropdown>
-        <ng-template let-dt pTemplate="datas">
-          <p-calendar [(ngModel)]="datas"
-                      selectionMode="range"
-                      [numberOfMonths]="2"
-                      [inline]="true"
-                      [readonlyInput]="true">
-          </p-calendar>
-        </ng-template>
-      </p-dropdown>-->
+    <div class="select" *ngFor="let filtro of filtros; let last = last; let first = first">
+      <div class="titulo" (click)="toggle(filtro)">{{filtro.categoria}}
+        <i class="pi pi-chevron-down"></i>
+      </div>
+      <div class="dropdown ui-shadow" *ngIf="filtro.mostrarConteudo">
+        <ng-template [ngIf]="first">
+          <div class="calendario">
+            <div class="data-inicio">
+              <app-input-calendar id="dataInicial"
+                                  required="true"
+                                  inline="true">
+              </app-input-calendar>
+            </div>
 
+            <div class="data-fim">
+              <app-input-calendar id="dataFinal"
+                                  required="true"
+                                  inline="true">
+              </app-input-calendar>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template [ngIf]="!first && !last">
+           <div class="multiSelect">
+             <div class="busca">
+               <app-input-texto></app-input-texto>
+             </div>
+
+             <div class="opcoes">
+               <ul>
+                 <li *ngFor="let conteudo of filtro.conteudoCheckbox">
+                   <p-checkbox label="{{conteudo}}"></p-checkbox>
+                 </li>
+               </ul>
+             </div>
+
+             <div class="actions">
+               <a (click)="toggle(filtro)">Cancelar</a>
+               <button pButton label="Aplicar"></button>
+             </div>
+           </div>
+        </ng-template>
+
+
+        <div *ngIf="last">
+          <div class="multiSelect">
+            <div class="busca-last">
+              <app-input-texto label="De" tipo="number"></app-input-texto>
+              <app-input-texto label="Até"></app-input-texto>
+            </div>
+
+            <div class="actions">
+              <a (click)="toggle(filtro)">Cancelar</a>
+              <button pButton label="Aplicar"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>

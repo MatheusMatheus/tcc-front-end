@@ -1,6 +1,5 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Evento} from 'src/app/dominio/Evento';
-import {CategoriaEvento} from '../../../../dominio/enums/CategoriaEvento';
 import {FiltroEvento} from '../../../../dominio/enums/FiltroEvento';
 import {Router} from '@angular/router';
 
@@ -31,6 +30,7 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.evento.nome = 'Guns and Roses';
+    this.tamanhoDaTela();
   }
 
   @HostListener('window:resize', ['$event'])

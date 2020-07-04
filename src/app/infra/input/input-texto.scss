@@ -1,0 +1,24 @@
+.ui-float-label {
+  margin: .5em;
+  label {
+    color: white;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  background-color: #0c1324;
+  border: 2px solid black;
+  color: white;
+}
+
+:host::ng-deep {
+  .ui-inputtext {
+    width: 100%;
+    padding: 1em;
+    background-color: #0c1324;
+    border: 2px solid black;
+    color: white;
+  }
+}

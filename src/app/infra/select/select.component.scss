@@ -1,9 +1,24 @@
-.ng-select.custom {
-  border:0px;
-  min-height: 0px;
-  border-radius: 0;
+label {
+  color: white;
+  font-size: .8em;
+  margin-left: 1em;
 }
-.ng-select.custom .ng-control  {
-  min-height: 0px;
-  border-radius: 0;
+
+:host::ng-deep {
+  .ng-select {
+    margin: .5em;
+
+    ::ng-deep {
+      .ng-select.ng-select-single, .ng-select-container {
+        height: 51px;
+        background-color: #0C1324;
+        border: none;
+        color: white;
+      }
+    }
+
+
+  }
+
+
 }

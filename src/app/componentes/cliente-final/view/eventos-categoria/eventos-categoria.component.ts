@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Evento} from '../../../../dominio/Evento';
 
 @Component({
@@ -8,12 +8,18 @@ import {Evento} from '../../../../dominio/Evento';
 })
 export class EventosCategoriaComponent implements OnInit {
 
-  @Input()
-  eventos: Evento[];
+  evento: Evento;
+
+  chaveDeBusca: string;
+
+  eventosPesquisadoPorChave: Evento[];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.evento = history.state.filtro.evento;
+    this.chaveDeBusca = history.state.filtro.filtroEvento;
+    // TODO: Buscar Eventos no backend de acordo com a chave de busca
     console.log(history.state.filtro);
   }
 

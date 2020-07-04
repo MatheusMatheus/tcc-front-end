@@ -16,8 +16,8 @@
         <p>Uma visão geral do seu pedido</p>
       </div>
 
-      <div class="eventos" *ngFor="let evento of eventosInseridos">
-        <div class="infos-evento">
+      <div class="p-grid eventos" *ngFor="let evento of eventosInseridos">
+        <div class="p-col-12 p-md-6 p-lg-6 infos-evento">
           <i class="pi pi-times fechar"></i>
           <h1>asdfasdfa dfasdfasdfasfas dfasdfasdfasf</h1>
           <p>Local do assento</p>
@@ -28,9 +28,9 @@
           <hr>
         </div>
 
-        <div class="checkout">
+        <div class="p-col-12 p-md-6 p-lg-6 checkout">
           <div class="quantidade">
-            <app-select [itens]="quantidades" [id]="'quantidade'"></app-select>
+            <app-select [itens]="[1,2,3,4,5]" [id]="'quantidade'"></app-select>
           </div>
           <div class="excluir">
             <a>Excluir</a>
@@ -39,32 +39,39 @@
         </div>
       </div>
 
-      <div class="eventos">
-        <div class="p-grid">
-          <div class="p-col-12 p-md-6 p-lg-6">
-            <div style="width: 100%">
-              <h4 style="float: left">Custo do serviço</h4>
-              <h4 style="float: right">R$ 5,00</h4>
+      <div class="p-grid totalizacao">
+        <div class="p-col-12 p-md-12 p-lg-12">
+          <div class="p-grid">
+            <div class="p-col-12 p-md-6 p-lg-6">
+              <div>
+                <h5>Custo do serviço</h5>
+                <h5>R$ 5,00</h5>
+              </div>
             </div>
-          </div>
 
-          <div class="p-col-12 p-md-6 p-lg-6">
-            <div style="width: 100%">
-              <h3 style="float: left">Total a pagar</h3>
-              <h2 style="float: right">R$ 1505,00</h2>
+            <div class="p-col-12 p-md-6 p-lg-6" >
+              <div style="width: 100%">
+                <h3>Total a pagar</h3>
+                <h2>R$ 1505,00</h2>
+              </div>
             </div>
-          </div>
-
-          <div class="p-col-12 p-md-12 p-lg-12">
-            <button label="Finalizar Pedido"
-                    pButton class="ui-button-primary largura-total"
-                    (click)="finalizarPedido()">
-            </button>
-          </div>
-          <div class="p-col-12 p-md-12 p-lg-12">
-            <a style="text-align: center; display: block" routerLink="/">Continuar comprando</a>
           </div>
         </div>
+
+        <div class="p-col-12 p-md-12 p-lg-12">
+          <div class="p-grid">
+            <div class="p-col-12 p-md-12 p-lg-12">
+              <button label="Finalizar Pedido"
+                      pButton class="ui-button-primary largura-total"
+                      (click)="finalizarPedido()">
+              </button>
+            </div>
+            <div class="p-col-12 p-md-12 p-lg-12">
+              <a style="text-align: center; display: block" routerLink="/">Continuar comprando</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

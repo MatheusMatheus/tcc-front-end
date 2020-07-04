@@ -1,11 +1,13 @@
 <div class="banner">
 
-  <img src="/assets/guns.jpg" class="imagem-evento">
-
- <!-- <img *ngIf="!evento.imagemPrincipal" src="/assets/evento-default.jpg" class="imagem-evento">-->
+  <picture class="imagem-evento">
+    <source media="(min-width: 900px)" srcset="/assets/guns.jpg">
+    <source media="(min-width: 600px)" srcset="/assets/guns-tablet.jpg">
+    <img src="/assets/guns-mobile.jpg" alt="IfItDoesntMatchAnyMedia">
+  </picture>
 
   <ng-template [ngIf]="evento">
-    <div  class="infos-evento">
+    <div class="infos-evento">
 
       <a routerLink="/checkout/evento"><h1>{{ evento.nome }}</h1></a>
       <p>{{ evento.data }}</p>

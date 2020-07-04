@@ -33,7 +33,7 @@ export class CardAnalyticsComponent implements OnInit {
       datasets: [
         {
           label: '',
-          backgroundColor: '#8A13CF',
+          backgroundColor: '#007AD9',
           data: [65, 59, 80, 81, 56, 55, 40],
           fill: false,
           options: {

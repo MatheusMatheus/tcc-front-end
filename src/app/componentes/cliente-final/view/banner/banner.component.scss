@@ -6,22 +6,24 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 500px;
-  overflow: hidden;
   z-index: 1;
 
   .imagem-evento {
     filter: brightness(65%);
     height: 100%;
-    width: auto;
+    width: 100%;
     overflow: hidden;
+
+    img {
+      width: 100%;
+    }
   }
 
 
   .infos-evento {
     position: absolute;
     left: 50%;
-    bottom: 35%;
+    bottom: 20%;
     transform: translate(-50%, 0%);
     text-align: center;
     width: 100%;
@@ -50,14 +52,13 @@
 
 @media all and (min-width: 600px) {
   .banner {
-    height: 400px;
     .imagem-evento {
       width: 100%;
     }
 
     .infos-evento {
-      bottom: 20%;
-      transform: translate(-50%, -5%);
+      transform: translate(-50%, 0%);
+
 
       p {
         display: block;
@@ -67,7 +68,7 @@
       a {
           font-size: 1.2em;
           h1 {
-            font-size: 2.5em;
+            font-size: 3.375em;
           }
       }
       .input {
@@ -84,10 +85,13 @@
 
   .banner {
     width: 100%;
-    height: 550px;
+
+    .imagem-evento {
+      max-height: 500px;
+    }
 
     .infos-evento {
-      bottom: 25%;
+      bottom: 10%;
       transform: translate(-50%, -10%);
 
       h1 {

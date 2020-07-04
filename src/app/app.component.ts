@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {Evento} from './dominio/Evento';
-import {MenuItem} from 'primeng';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,25 +9,25 @@ import {MenuItem} from 'primeng';
 })
 export class AppComponent implements OnInit {
 
-  items: MenuItem[];
+  items: Menu[];
 
   display = false;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   evento: Evento;
   colorido = false;
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event) {
+  onScroll() {
     this.colorido = window.pageYOffset > 80;
   }
 
   ngOnInit(): void {
     this.items = [
-      { label: 'Minha conta' },
-      { label: 'Criar Evento' },
+      { label: 'Minha conta', routerLink: '/conta/login' },
+      { label: 'Criar Evento', routerLink: '/dashboard/home' },
       { label: 'Show' },
       { label: 'Esporte' },
       { label: 'Cinema' },
@@ -37,6 +37,12 @@ export class AppComponent implements OnInit {
     ];
   }
 
+  goTo(routerLink: string) {
+    this.router.navigate([routerLink]);
+  }
+}
 
-
+interface Menu {
+  label: string;
+  routerLink ?: string;
 }

@@ -41,11 +41,7 @@ nav {
 
 .colorido {
   background-color: #0c1324;
-  -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
   -webkit-box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
   box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
   height: auto;
 }
@@ -56,8 +52,8 @@ nav {
   .navigation {
     justify-content: space-between;
     padding: 0;
-    background-color: black;
   }
+
   .navigation li {
     text-align: center;
     padding: 10px;

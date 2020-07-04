@@ -4,13 +4,14 @@ import {RouterModule, Routes} from '@angular/router';
 import {BannerComponent} from './banner/banner.component';
 import {CardEventoComponent} from './card-evento/card-evento.component';
 import {IndexComponent} from './index/index.component';
-import {AutoCompleteModule, ButtonModule, CalendarModule, CarouselModule, DropdownModule, InputTextModule} from 'primeng';
+import {AutoCompleteModule, ButtonModule, CalendarModule, CardModule, CarouselModule, DropdownModule, InputTextModule} from 'primeng';
 import {InfraModule} from '../../../infra/infra.module';
 import {FlexModule} from '@angular/flex-layout';
-import {ListboxModule} from 'primeng/listbox';
 import {FiltroEventoComponent} from './filtro-evento/filtro-evento.component';
 import { EventosCategoriaComponent } from './eventos-categoria/eventos-categoria.component';
 import {FormsModule} from '@angular/forms';
+import {CheckboxModule} from 'primeng/checkbox';
+
 
 const rotas: Routes = [
   {path: '', component: IndexComponent},
@@ -31,14 +32,15 @@ const rotas: Routes = [
     ButtonModule,
     InputTextModule,
     AutoCompleteModule,
-    ListboxModule,
+    CheckboxModule,
     InfraModule,
     FlexModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild(rotas),
     CalendarModule,
-    DropdownModule
+    DropdownModule,
+    CardModule
   ],
   exports: [IndexComponent, BannerComponent]
 })

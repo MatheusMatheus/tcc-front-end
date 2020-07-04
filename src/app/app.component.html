@@ -1,6 +1,6 @@
 <nav>
 
-    <ul class="navigation" (scroll)="onScroll($event)"
+    <ul class="navigation" (scroll)="onScroll()"
         [className]="colorido ? 'navigation colorido' : 'navigation'">
 
       <li class="toggle">
@@ -9,7 +9,7 @@
           <ul class="menu-mobile">
             <li *ngFor="let item of items"
               style="color: black; z-index: 200; font-weight: 700; padding: 1em"
-            >{{item.label}}</li>
+              (click)="goTo(item.routerLink)">{{item.label}}</li>
           </ul>
         </p-sidebar>
       </li>
