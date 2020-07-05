@@ -30,9 +30,8 @@
 
   <div class="p-col-12 p-md-6 p-lg-6">
     <app-input-texto id="qtdMinima"
-                     [label]="'Quantidade mínima'"
-                     [placeholder]="'Quantidade mínima'"
-                     [tipo]="'number'"
+                     label="Quantidade mínima"
+                     tipo="number"
                      [(ngModel)]="evento.qtdMinima" name="qtdMinima"
                      required="true">
     </app-input-texto>
@@ -40,9 +39,8 @@
 
   <div class="p-col-12 p-md-6 p-lg-6">
     <app-input-texto id="qtdMaxima"
-                     [label]="'Quantidade máxima'"
-                     [placeholder]="'Quantidade máxima'"
-                     [tipo]="'number'"
+                     label="Quantidade máxima"
+                     tipo="number"
                      required="true"
                      [(ngModel)]="evento.qtdMaxima" name="qtdMaxima">
     </app-input-texto>
@@ -77,11 +75,19 @@
   <div class="p-col-12 p-md-12 p-lg-12">
     <hr>
     <h2>Local</h2>
-    <p>Depois eu integro com uma API de mapas de verdade</p>
   </div>
 
   <div class="p-col-12 p-md-12 p-lg-12">
-    <img src="/assets/mapa.png" alt="" style="width: 100%" />
+    <div class="p-grid">
+      <div class="p-col-12 p-md-12 p-lg-12">
+        <app-mapa-local></app-mapa-local>
+      </div>
+
+      <div class="p-col-12 p-md-12 p-lg-12">
+        <p><strong>Local Selecionado:</strong> Papua Nova Guiné</p>
+      </div>
+    </div>
+
   </div>
 
   <div class="p-col-12 p-md-12 p-lg-12">
@@ -100,8 +106,7 @@
     <app-input-calendar id="dataEvento"
                        [label]="'Data'"
                        [placeholder]="'Data do Evento'"
-                       required="true"
-                       [(ngModel)]="evento.data" name="dataEvento">
+                       required="true">
     </app-input-calendar>
   </div>
 
@@ -110,8 +115,7 @@
                         [label]="'Horário'"
                         [placeholder]="'O evento começa às'"
                         [required]="true"
-                        [somenteHorario]="true"
-                        [(ngModel)]="evento.hora" name="horaEvento">
+                        [somenteHorario]="true">
     </app-input-calendar>
   </div>
 
@@ -120,12 +124,8 @@
     <h2>Imagens</h2>
   </div>
 
-  <div class="p-col-12 p-md-6 p-lg-6">
-    <app-upload [label]="'Imagem Principal do Evento'"></app-upload>
-  </div>
-
-  <div class="p-col-12 p-md-6 p-lg-6">
-    <app-upload [label]="'Imagem Secundária do Evento'"></app-upload>
+  <div class="p-col-12 p-md-12 p-lg-12">
+   <app-imagem-evento></app-imagem-evento>
   </div>
 
   <div class="p-col-12 p-md-12 p-lg-12">

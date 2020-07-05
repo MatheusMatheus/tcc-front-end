@@ -11,6 +11,7 @@ import {FiltroEventoComponent} from './filtro-evento/filtro-evento.component';
 import { EventosCategoriaComponent } from './eventos-categoria/eventos-categoria.component';
 import {FormsModule} from '@angular/forms';
 import {CheckboxModule} from 'primeng/checkbox';
+import { IndicadorFiltroComponent } from './filtro-evento/indicador-filtro/indicador-filtro.component';
 
 
 const rotas: Routes = [
@@ -26,6 +27,7 @@ const rotas: Routes = [
     IndexComponent,
     FiltroEventoComponent,
     EventosCategoriaComponent,
+    IndicadorFiltroComponent,
   ],
   imports: [
     CarouselModule,

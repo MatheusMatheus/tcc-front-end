@@ -11,7 +11,7 @@ export class FiltroEventoComponent implements OnInit {
 
   dataFinal: Date;
 
-  filtros: Filtro[] = [];
+  filtros: any[] = [];
 
   constructor() { }
 
@@ -30,17 +30,11 @@ export class FiltroEventoComponent implements OnInit {
     ];
   }
 
-  toggle(filtro: Filtro) {
+  toggle(filtro: any) {
     this.filtros
       .filter(filter => filter.categoria !== filtro.categoria)
       .forEach(filter => filter.mostrarConteudo = false);
     filtro.mostrarConteudo = !filtro.mostrarConteudo;
   }
 
-}
-
-interface Filtro {
-  categoria: string;
-  mostrarConteudo: boolean;
-  conteudoCheckbox ?: string[];
 }

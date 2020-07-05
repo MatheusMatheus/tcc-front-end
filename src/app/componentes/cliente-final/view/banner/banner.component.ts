@@ -2,8 +2,7 @@ import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Evento} from 'src/app/dominio/Evento';
 import {FiltroEvento} from '../../../../dominio/enums/FiltroEvento';
 import {Router} from '@angular/router';
-
-const mobile = 900;
+import {ResolucaoDispositivoService} from '../../../../services/resolucao-dispositivo.service';
 
 @Component({
   selector: 'app-banner',
@@ -25,7 +24,8 @@ export class BannerComponent implements OnInit {
   cidade = FiltroEvento.cidade;
   nome = FiltroEvento.nome;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private resolucao: ResolucaoDispositivoService) {
   }
 
   ngOnInit(): void {
@@ -36,7 +36,7 @@ export class BannerComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   @HostListener('window:load', ['$event'])
   tamanhoDaTela() {
-    this.isMobile = window.innerWidth < mobile;
+    this.isMobile = this.resolucao.tamanhoDaTela();
   }
 
   navigateToCategoria(filtroEvento: FiltroEvento, evento: Evento) {

@@ -4,7 +4,7 @@
   position: relative;
 
   .select {
-    margin-right: 1em;
+    margin: 0 .5em;
     width: 8em;
 
     .titulo {
@@ -21,7 +21,7 @@
     .dropdown {
       background-color: #222B45;
       min-height: 8em;
-      width: 25em;
+      width: 30em;
       z-index: 100;
       margin-top: .25em;
 
@@ -94,7 +94,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 900px) {
   .selects {
     display: none;
   }

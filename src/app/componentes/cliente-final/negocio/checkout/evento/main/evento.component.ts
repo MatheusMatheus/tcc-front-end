@@ -1,8 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {Evento} from '../../../../../../dominio/Evento';
 import {EventoService} from '../../../../../../services/evento/evento.service';
-
-const mobile = 900;
+import {ResolucaoDispositivoService} from '../../../../../../services/resolucao-dispositivo.service';
 
 @Component({
   selector: 'app-evento',
@@ -17,7 +16,8 @@ export class EventoComponent implements OnInit {
 
   ordemPrecoSelecionada: string;
 
-  constructor(private eventoService: EventoService) { }
+  constructor(private eventoService: EventoService,
+              private resolucao: ResolucaoDispositivoService) { }
 
   ngOnInit(): void {
     this.tamanhoDaTela();
@@ -26,7 +26,7 @@ export class EventoComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   tamanhoDaTela() {
-        this.isMobile = window.innerWidth < mobile;
+        this.isMobile = this.resolucao.tamanhoDaTela();
   }
 
   get ordemPreco(): string[] {

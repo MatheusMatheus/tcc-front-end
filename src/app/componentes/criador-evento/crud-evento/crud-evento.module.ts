@@ -17,6 +17,10 @@ import {MapaAmbienteComponent} from './criar-evento/mapa-ambiente/mapa-ambiente.
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {EventoComponent} from '../../cliente-final/negocio/checkout/evento/main/evento.component';
 import {CardEventoComponent} from '../../cliente-final/view/card-evento/card-evento.component';
+import { MapaLocalComponent } from './criar-evento/mapa-local/mapa-local.component';
+import { ImagemEventoComponent } from './criar-evento/imagem-evento/imagem-evento.component';
+import {PanelModule} from 'primeng/panel';
+
 
 @NgModule({
     declarations: [
@@ -25,7 +29,9 @@ import {CardEventoComponent} from '../../cliente-final/view/card-evento/card-eve
       CrudEventoComponent,
       CriarIngressoComponent,
       TipoPrecoComponent,
-      MapaAmbienteComponent
+      MapaAmbienteComponent,
+      MapaLocalComponent,
+      ImagemEventoComponent
     ],
     exports: [
         ListagemEventoComponent
@@ -44,7 +50,8 @@ import {CardEventoComponent} from '../../cliente-final/view/card-evento/card-eve
     AccordionModule,
     SplitButtonModule,
     ToggleButtonModule,
-    DynamicDialogModule
+    DynamicDialogModule,
+    PanelModule
   ],
   entryComponents: [
     EventoComponent, CardEventoComponent

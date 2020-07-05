@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MessageService} from 'primeng';
 import {AbstractControleValueAccessor} from '../AbstractControleValueAccessor';
 
@@ -10,21 +10,37 @@ import {AbstractControleValueAccessor} from '../AbstractControleValueAccessor';
 })
 export class UploadComponent extends AbstractControleValueAccessor implements OnInit {
 
-  uploadedFiles: any[] = [];
-
   @Input()
   label ?: string;
 
-  constructor(private messageService: MessageService) {
+  @Output()
+  imagemOutput = new EventEmitter();
+
+  imgURL: any;
+
+  imagePath: any;
+
+  constructor() {
     super();
   }
 
-  onUpload(event) {
-    for (const file of event.files) {
-      this.uploadedFiles.push(file);
-    }
+  onUpload(files) {
+    if (files.length > 0) {
+      const mimeType = files[0].type;
 
-    this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: ''});
+      if (mimeType.match(/image\/*/) == null) {
+        return;
+      }
+
+      const reader = new FileReader();
+      this.imagePath = files;
+      reader.readAsDataURL(files[0]);
+
+      reader.onload = (evt) => {
+        this.imgURL = reader.result;
+        this.imagemOutput.emit(this.imgURL);
+      };
+    }
   }
 
   ngOnInit(): void {

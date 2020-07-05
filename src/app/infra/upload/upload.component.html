@@ -1,10 +1,36 @@
-<p-fileUpload #fubauto
-              mode="basic"
+<!--
+<p-fileUpload mode="advanced"
+              multiple="multiple"
               name="demo[]"
-              url="./upload.php"
               accept="image/*"
               maxFileSize="1000000"
               (onUpload)="onUpload($event)"
-              [auto]="true"
-              chooseLabel="{{label}}">
+              [showUploadButton]="false"
+              [auto]="true">
+
+      <ng-template pTemplate="toolbar">
+        <div>Upload 3 Files</div>
+      </ng-template>
+      <ng-template let-file pTemplate="file">
+        <ul *ngIf="uploadedFiles.length">
+          <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="uploaded">
+          <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+         </ul>
+        </div>
+      </ng-template>
+
 </p-fileUpload>
+-->
+<div class="wrapper">
+  <input type="file" name="file" id="file"
+         pButton
+         class="inputfile"
+         #file (change)="onUpload(file.files)"/>
+  <label for="file" class="ui-button-primary">Esolha uma imagem</label>
+</div>
+
