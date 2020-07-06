@@ -1,8 +1,10 @@
-<label *ngIf="label">{{label}}</label>
+<span class="ui-float-label">
 <p-calendar [(ngModel)]="data"
-            [placeholder]="placeholder"
             [timeOnly]="somenteHorario"
             [showTime]="horaEdata"
             [inline]="inline"
-            [style]="{width: '100%'}">
+            [style]="{width: '100%'}"
+            id="float-input">
 </p-calendar>
+  <label for="float-input" *ngIf="label">{{label}}</label>
+</span>

@@ -8,25 +8,25 @@
     <h2>Informações gerais</h2>
   </div>
 
-    <div class="p-col-12 p-md-6 p-lg-6">
-      <app-input-texto id="tituloEvento"
-                       [label]="'Título'"
-                       [placeholder]="'Título do Evento'"
-                       [tipo]="'text'"
-                       required="true"
-                       [(ngModel)]="evento.nome" name="tituloEvento">
-      </app-input-texto>
-    </div>
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-input-texto id="tituloEvento"
+                     [label]="'Título'"
+                     [placeholder]="'Título do Evento'"
+                     [tipo]="'text'"
+                     required="true"
+                     [(ngModel)]="evento.nome" name="tituloEvento">
+    </app-input-texto>
+  </div>
 
-    <div class="p-col-12 p-md-6 p-lg-6">
-      <app-input-texto id="oraganizador"
-                       [label]="'Organizador'"
-                       [placeholder]="'Nome do organizador'"
-                       [tipo]="'text'"
-                       required="true"
-                       [(ngModel)]="evento.organizador" name="oraganizador">
-      </app-input-texto>
-    </div>
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <app-input-texto id="oraganizador"
+                     [label]="'Organizador'"
+                     [placeholder]="'Nome do organizador'"
+                     [tipo]="'text'"
+                     required="true"
+                     [(ngModel)]="evento.organizador" name="oraganizador">
+    </app-input-texto>
+  </div>
 
   <div class="p-col-12 p-md-6 p-lg-6">
     <app-input-texto id="qtdMinima"
@@ -46,31 +46,51 @@
     </app-input-texto>
   </div>
 
-    <div class="p-col-12 p-md-12 p-lg-12">
-      <div class="p-grid p-align-center">
-        <div class="p-col-12 p-md-6 p-lg-6">
-          <app-select [label]="'Tipo'"
-                      [placeholder]="'Tipo do evento'"
-                      [itens]="categorias"
-                      [(ngModel)]="evento.categoria">
-          </app-select>
-        </div>
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <div class="p-grid">
+      <div class="p-col-12 p-md-6 p-lg-6">
+        <app-select [label]="'Tipo'"
+                    [placeholder]="'Tipo do evento'"
+                    [itens]="categorias"
+                    [(ngModel)]="evento.categoria">
+        </app-select>
+      </div>
 
-        <div class="p-col-12 p-md-6 p-lg-6">
-          <br>
-          <div class="menor">
-            <p-toggleButton [(ngModel)]="evento.menorDesacompanhado"
-                           name="menor"
-                           onLabel="Sim"
-                           offLabel="Não"
-                           required="true">
-            </p-toggleButton>
+      <div class="p-col-12 p-md-6 p-lg-6">
+        <div class="menor">
+          <p-toggleButton [(ngModel)]="evento.menorDesacompanhado"
+                         name="menor"
+                         onLabel="Sim"
+                         offLabel="Não"
+                         required="true">
+          </p-toggleButton>
 
-            <p>Permite menor desacompanhado?</p>
-          </div>
+          <p>Permite menor desacompanhado?</p>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <div class="p-grid">
+      <div class="p-col-12 p-md-6 p-lg-6">
+        <app-input-calendar id="dataEvento"
+                            label="Data"
+                            placeholder="Data do Evento"
+                            required="true">
+        </app-input-calendar>
+      </div>
+
+      <div class="p-col-12 p-md-6 p-lg-6">
+        <app-input-calendar id="horaEvento"
+                            [label]="'Horário'"
+                            [placeholder]="'O evento começa às'"
+                            [required]="true"
+                            [somenteHorario]="true">
+        </app-input-calendar>
+      </div>
+    </div>
+  </div>
 
   <div class="p-col-12 p-md-12 p-lg-12">
     <hr>
@@ -99,28 +119,6 @@
 
   <div class="p-col-12 p-md-12 p-lg-12">
     <hr>
-    <h2>Data e hora</h2>
-  </div>
-
-  <div class="p-col-12 p-md-6 p-lg-6">
-    <app-input-calendar id="dataEvento"
-                       [label]="'Data'"
-                       [placeholder]="'Data do Evento'"
-                       required="true">
-    </app-input-calendar>
-  </div>
-
-  <div class="p-col-12 p-md-6 p-lg-6">
-    <app-input-calendar id="horaEvento"
-                        [label]="'Horário'"
-                        [placeholder]="'O evento começa às'"
-                        [required]="true"
-                        [somenteHorario]="true">
-    </app-input-calendar>
-  </div>
-
-  <div class="p-col-12 p-md-12 p-lg-12">
-    <hr>
     <h2>Imagens</h2>
   </div>
 
@@ -132,11 +130,9 @@
     <hr>
     <div class="criar-evento">
       <a (click)="mostrarPreview()">Preview da página do evento</a>
-      <p-radioButton name="termos"
-                     value="false"
-                     label="Concordo com os termos de uso"
-                     inputId="termos">
-      </p-radioButton>
+      <p-checkbox label="Concordo com os termos de uso"
+                  name="concordar">
+      </p-checkbox>
       <button label="Criar evento" pButton class="ui-button-primary largura-total"></button>
     </div>
 

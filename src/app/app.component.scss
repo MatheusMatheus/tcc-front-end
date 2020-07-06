@@ -21,6 +21,7 @@ nav {
   display: flex;
   padding: .8em;
   align-self: center;
+  color: white;
 }
 
 .navigation li:hover{
@@ -44,9 +45,19 @@ nav {
   -webkit-box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
   box-shadow: 0 3px 14px 0 rgba(0,0,0,0.75);
   height: auto;
+
+  li {
+    color: inherit;
+  }
 }
 
-
+.menu-mobile {
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 1em;
+  }
+}
 
 @media all and (max-width: 900px) {
   .navigation {

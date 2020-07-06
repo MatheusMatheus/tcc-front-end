@@ -10,6 +10,7 @@
 
   <p-chart type="{{tipoGrafico.valueOf()}}"
            [data]="data"
+           [height]="altura"
            (onDataSelect)="selectData($event)"
            *ngIf="!graficoProgresso">
   </p-chart>

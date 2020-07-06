@@ -5,7 +5,7 @@ import {TableModule} from 'primeng/table';
 import {CriarEventoComponent} from './criar-evento/criar-evento.component';
 import {CrudEventoComponent} from './crud-evento.component';
 import {CardModule} from 'primeng/card';
-import {ButtonModule, ToggleButtonModule, MenuModule, RadioButtonModule, SplitButtonModule} from 'primeng';
+import {ButtonModule, ToggleButtonModule, MenuModule, RadioButtonModule, SplitButtonModule, CheckboxModule} from 'primeng';
 import {CrudEventoRoutingModule} from './crud-evento-routing.module';
 import {InfraModule} from '../../../infra/infra.module';
 import {FormsModule} from '@angular/forms';
@@ -36,23 +36,24 @@ import {PanelModule} from 'primeng/panel';
     exports: [
         ListagemEventoComponent
     ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    TableModule,
-    CardModule,
-    ButtonModule,
-    MenuModule,
-    CrudEventoRoutingModule,
-    InfraModule,
-    RadioButtonModule,
-    HttpClientModule,
-    AccordionModule,
-    SplitButtonModule,
-    ToggleButtonModule,
-    DynamicDialogModule,
-    PanelModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        TableModule,
+        CardModule,
+        ButtonModule,
+        MenuModule,
+        CrudEventoRoutingModule,
+        InfraModule,
+        RadioButtonModule,
+        HttpClientModule,
+        AccordionModule,
+        SplitButtonModule,
+        ToggleButtonModule,
+        DynamicDialogModule,
+        PanelModule,
+        CheckboxModule
+    ],
   entryComponents: [
     EventoComponent, CardEventoComponent
   ]

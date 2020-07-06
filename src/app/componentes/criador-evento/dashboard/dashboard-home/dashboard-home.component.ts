@@ -14,7 +14,7 @@ export class DashboardHomeComponent implements OnInit {
 
   graficoLinha = TipoGrafico.LINHA;
   graficoProgresso = TipoGrafico.PROGRESSO;
-  graficoBarra = TipoGrafico.BARRA;
+  graficoDoughnut = TipoGrafico.DOUGHNUT;
 
   constructor(private eventoService: EventoService) { }
 

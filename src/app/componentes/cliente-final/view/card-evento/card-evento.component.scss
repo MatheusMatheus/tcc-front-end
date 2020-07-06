@@ -43,7 +43,7 @@
 
 a, span, h1 {
   text-decoration: none;
-  color: white;
+  color: #FFB300;
 }
 
 a:hover {
@@ -56,6 +56,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
 }
 
 .container-img {
@@ -83,7 +84,7 @@ img:hover {
   width: auto;
   justify-content: flex-start;
   text-align: center;
-  background-color: #222B45;
+  background-color: #FFB300;
 }
 
 .evento-nome, .local-data, .valor {
@@ -105,16 +106,15 @@ img:hover {
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-
+  color: #FFB300;
 }
 
 .data-valor {
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
-  background-color: rgb(31, 33, 34);
-  color: white;
+  background-color: black;
+  color: #FFB300;
   padding: 1em;
 }
 
@@ -129,6 +129,7 @@ img:hover {
 .local, .cidade {
   display: block;
   font-size: 1.3em;
+  color: black;
 }
 
 .local {

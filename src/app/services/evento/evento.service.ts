@@ -32,7 +32,7 @@ export class EventoService {
       }],
       qtdMaxima: 0,
       qtdMinima: 0,
-      nome: 'Abestado',
+      nome: 'Banda Qualquer',
       data: new Date().toLocaleDateString(),
       hora: '20:00',
       menorDesacompanhado: false,

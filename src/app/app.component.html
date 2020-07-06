@@ -5,10 +5,11 @@
 
       <li class="toggle">
         <i class="pi pi-bars" (click)="display = true"></i>
-        <p-sidebar [(visible)]="display" [baseZIndex]="300" [style]="{width:'100%'}">
+        <p-sidebar [(visible)]="display"
+                   [baseZIndex]="300"
+                   [style]="{width:'100%', padding: '2em'}">
           <ul class="menu-mobile">
             <li *ngFor="let item of items"
-              style="color: black; z-index: 200; font-weight: 700; padding: 1em"
               (click)="goTo(item.routerLink)">{{item.label}}</li>
           </ul>
         </p-sidebar>

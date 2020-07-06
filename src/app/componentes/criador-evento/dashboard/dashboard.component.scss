@@ -1,5 +1,5 @@
 .menu-lateral {
-  padding: 1em;
+  padding: 1.5em;
 }
 
 :host ::ng-deep {
@@ -21,7 +21,11 @@
       outline: none;
 
       .ui-menuitem-link {
-        padding: .9em 1.5em .9em 1.5em;
+        padding: 2em 1.5em .9em 1.5em;
+
+        &:hover {
+          color: black;
+        }
       }
     }
   }

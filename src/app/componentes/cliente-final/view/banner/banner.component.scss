@@ -7,6 +7,7 @@
   position: relative;
   width: 100%;
   z-index: 1;
+  color: white;
 
   .imagem-evento {
     filter: brightness(65%);
@@ -32,6 +33,7 @@
       text-align: center;
       margin: 0;
       padding: 0 ;
+      color: white;
     }
 
     a:not(:first-child) {

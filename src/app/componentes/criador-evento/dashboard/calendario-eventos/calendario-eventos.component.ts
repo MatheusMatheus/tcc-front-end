@@ -16,7 +16,8 @@ export class CalendarioEventosComponent implements OnInit {
   options: any;
 
   calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth'
+    initialView: 'dayGridMonth',
+    height: 650
   };
 
   ngOnInit(): void {

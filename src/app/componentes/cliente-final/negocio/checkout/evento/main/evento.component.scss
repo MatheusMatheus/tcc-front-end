@@ -4,7 +4,6 @@
 
 .filtro {
   display: none;
-
 }
 
 .escolha {
@@ -59,22 +58,24 @@
       .select {
         width: 150px;
       }
-    }
 
-    li:first-child {
-      padding-left: 0;
-      font-size: 1.5em;
-    }
+      &:first-child {
+        padding-left: 0;
+        font-size: 1.5em;
+      }
 
-    li:last-child {
-      margin-left: auto;
-      padding-right: 0;
+      &:last-child {
+        margin-left: auto;
+        padding-right: 0;
+      }
     }
+  }
 
-    li:first-child:hover, li:last-child:hover  {
-      background: transparent;
-      cursor: auto;
-    }
+  li:first-child:hover, li:last-child:hover  {
+    background: transparent;
+    pointer-events: none;
+    color: inherit;
+    cursor: none;
   }
 
 

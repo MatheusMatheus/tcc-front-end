@@ -22,10 +22,12 @@ h1 {
   .data-horario, .info-evento, .comprar{
     width: 100%;
     text-align: center;
-    border: 2px solid black;
+    border: 1px solid #3e4446;
     border-top: none;
-    background-color: #222B45;
+    background-color: #0D0E0E;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
     padding: 1em;
+    color: #d1cec9;
   }
   .data-horario {
     flex-shrink: 2;
@@ -43,7 +45,7 @@ h1 {
     }
 
     i:hover {
-      color: #116FBF;
+      color: #e35e25;
     }
 
     button {

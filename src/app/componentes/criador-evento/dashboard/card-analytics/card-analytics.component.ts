@@ -22,6 +22,9 @@ export class CardAnalyticsComponent implements OnInit {
   @Input()
   tipoGrafico ?: TipoGrafico;
 
+  @Input()
+  altura?: string;
+
 
   graficoProgresso = false;
 
@@ -33,7 +36,7 @@ export class CardAnalyticsComponent implements OnInit {
       datasets: [
         {
           label: '',
-          backgroundColor: '#007AD9',
+          backgroundColor: '#FFB300',
           data: [65, 59, 80, 81, 56, 55, 40],
           fill: false,
           options: {

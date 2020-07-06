@@ -4,7 +4,7 @@
   .essa, .passada {
     padding: 1em;
     line-height: 2em;
-    color: white;
+    color: #FFB300;
 
     div:last-child {
       font-size: 1.5em;
@@ -23,13 +23,15 @@
 
     li {
       margin: .5em;
+      pointer-events: none;
 
 
       .descricao {
         display: flex;
         align-items: center;
         padding: .5em;
-        background-color: #151A30;
+        background-color: #181a1b;
+        color: #FFB300;
 
         img {
           width: 50px;
@@ -43,12 +45,15 @@
           span {
             display: block;
           }
-        }
 
-        div:last-child {
+          &:last-child {
             margin-left: auto;
+          }
         }
+      }
 
+      &:hover {
+        color: inherit;
       }
     }
   }

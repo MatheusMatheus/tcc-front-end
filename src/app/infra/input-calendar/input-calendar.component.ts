@@ -4,7 +4,7 @@ import {InputComponent} from '../input/input.component';
 @Component({
   selector: 'app-input-calendar',
   templateUrl: './input-calendar.component.html',
-  styleUrls: ['./input-calendar.component.scss']
+  styleUrls: ['../input/input-texto.scss']
 })
 export class InputCalendarComponent extends InputComponent {
 
